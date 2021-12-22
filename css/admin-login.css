@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: Open Sans;
+    background-color:#135780 ;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fff;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+
+   /* Logo  */
+   .logo {
+    font-size: 32px;
+    /* font-size: 85px; */
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-right: 15px;
+    padding-left: 150px;
+    padding-top: 25px;
+   
+/* Some animation to the header logo */
+    text-shadow: 0 0 50px rgb(0, 223, 252),
+                0 0 50px rgb(10, 12, 161),
+                0 0 50px rgb(252, 0, 126),
+                0 0 50px lawngreen,
+                0 0 50px rgb(252, 0, 55);
+    animation: animate 5s linear infinite;
+
+@keyframes: animate {
+        0%{
+            filter :hue-rotate(0deg);
+        }
+  filter: hue-rotate(360deg) ;
+}
+   }
+
+img {
+
+    margin-top: -120px;
+    border-radius: 15px;
+    width: 150px;
+    margin-left: 150px;
+   
+  }
+
+  .container-main {
+    /* position: absolute; */
+    width: 100%;
+    margin-top: 150px;
+    left: 350px;
+  
+    
+  }
+  .container-main h2{
+    color: white;
+    margin-left: 450px;
+  }
+  
+   p{
+    position: absolute;
+    width: 400px;
+    color: red;
+    margin-top: 150px;
+    margin-left: 250px;
+    letter-spacing: 2px;
+    font-size: 25px;
+  }
+  .container-form {
+    font-family: Open Sans;
+    margin-left: 450px;
+    color: white;
+  }
+ 
+  input[type=text], input[type=password] {
+    width: 250px;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-left: 670px;
+  }
+  
+  button {
+    position: absolute;
+    background-color:#c4c4c4;
+    color:black;
+    padding: 12px 2px;
+    width: 150px;
+    margin-top: 90px ;
+    /* margin-right: 190px; */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  label{
+      margin-left: 650px;
+      
+  }
+  
+  button:hover {
+    background-color: #1a7272;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+   /*Navigations menus*/
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #1a7272;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+
+
+   /*Dealing with responsive*/
+
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+
+  
+   /*Responsive - menu*/
+
+input[type=checkbox]{
+  display: none;
+ } 
+ /*Hamburger */
+ .hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+ }
+ /* mediaqueries*/
+ @media (max-width: 768px) {
+ .menu { 
+  display:none;
+  position: absolute;
+  background-color:teal;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 16px 0;
+ }
+ .menu li:hover {
+  display: inline-block;
+  background-color:#4c9e9e;
+  transition: 0.3s ease;
+ }
+ .menu li + li {
+  margin-top: 12px;
+ }
+ input[type=checkbox]:checked ~ .menu{
+  display: block;
+ }
+ .hamburger {
+  display: block;
+ }
+
+ }
