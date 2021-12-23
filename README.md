@@ -1,5 +1,4 @@
 # my-brand
-
 Guidelines
 
 On Trello, create user stories to setup the User Interface elements:
