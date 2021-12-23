@@ -34,7 +34,6 @@
    /* logo*/
    .logo {
     font-size: 32px;
-    /* font-size: 85px; */
     font-weight: bold;
     color: rgb(20, 20, 20);
     padding-right: 15px;
@@ -92,28 +91,22 @@
        width: 500px;
        height: 500px;
      
-       /* background-color: rebeccapurple; */
      }
-     .header-body h4{
+     .header-body .about-text{
        margin-top: 100px;
-       /* text-indent: 12rem; */
-       font-size: 45px;
+       font-size: 40px;
        color: white;
-       letter-spacing: 5px;
+       letter-spacing: 4px;
      }
   
   
     .first-para{
        width: 100%;
-       /* width: 95%; */
-       /* position: absolute; */
        color: white;
        text-align: left;
        letter-spacing: 5px;
        margin: 25px;
-       /* flex-grow: 4;  */
        flex-wrap: wrap;
-       /* background-color: red; */
        font-size: 25px;
   
      }
@@ -121,19 +114,16 @@
     .second-para{
         font-size: 25px;
         width: 120%;
-        /* width: 95%; */
-        /* position: absolute; */
         color: white;
         text-align: left;
         letter-spacing: 5px;
         margin: 25px;
-        /* flex-grow: 4;  */
         flex-wrap: nowrap;
-        /* background-color: red; */
+      
       }
    
   
-     /* NAVBAR MENU */
+     /* menu bar*/
      .menu {
       display: flex;
       gap: 1em;
@@ -160,13 +150,14 @@
     
      @media (max-width: 768px) {
     .navbar .menu { 
+      position:absolute;
       display:none;
       position: absolute;
       background-color:rgb(91, 175, 175);
       right: 0px;
       left: 0;
-      padding: 10px 10px;
-      margin-left: -80px;
+      padding: 5px 5px;
+      margin-left: 90px;
      }
      .menu li:hover {
       display: inline-block;
@@ -181,55 +172,54 @@
      }
      .hamburger {
       display: block;
-      /* display: none; */
       font-size: 12px;
-   margin-left: -45px;
+      margin-left: -100px;
     
      }
      .logo {
       font-size: 25px;
-      /* font-size: 85px; */
       font-weight: bold;
       color: rgb(20, 20, 20);
-      padding-right: 15px;
-      padding-left: 50px;
       padding-top: 25px;
+      padding-left: 10px;
      
     } 
     .body-main{
       width: 350px;
-      height: 450px;
+      height: 250px;
     }
     .profile{
       position: absolute;
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       margin-left: 80px;
-      margin-top: -400px;
+      margin-top: -350px;
     }
    
-    .header-body h4{
+    .header-body .about-text{
+      position: relative;
       margin-top: 30px;
       /* text-indent: 12rem; */
-      font-size: 25px;
+      font-size: 20px;
       color: white;
-      letter-spacing: 5px;
+      letter-spacing: normal;
       padding: 15px;
       padding-right: 15px;
+      margin-left: 45px;
+      /* margin-bottom: 350px; */
     }
     
     .first-para{
       letter-spacing: normal;
       font-size: 13px;
-      background-color: rebeccapurple;
       margin-top: 180px;
-      margin-left: 15px;
+      margin-left: -22px;
      
     }
     .second-para{
 
       letter-spacing: normal;
-      margin: 10px;
+      margin-left: -40px;
       font-size: 13px;
       padding: 10px;
       padding-right: 25px;

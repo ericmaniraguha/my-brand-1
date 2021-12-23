@@ -71,7 +71,8 @@ body{
   font-family: Open Sans;
 }
 .blog-heading h3{
-    font-size: 25px;
+    font-size: 20px;
+    margin-left: 65px;
 }
 
 /* blogs-------------  */
@@ -97,6 +98,7 @@ body{
   margin-top: -440px;
   margin-left: -1300px;
 }
+
 
 .blog-container{
   display: flex;
