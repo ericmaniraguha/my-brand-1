@@ -1,0 +1,193 @@
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ body {
+  font-family: Open Sans;
+  background-color:#135780 ;
+ }
+ a {
+  text-decoration: none;
+ }
+ li {
+  list-style: none;
+ }
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+ }
+ .nav-links a {
+  color: #fff;
+
+  
+ }
+ /* logo*/
+ .logo {
+  font-size: 32px;
+  /* font-size: 85px; */
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+  padding-right: 15px;
+  padding-left: 100px;
+  padding-top: 25px;
+ 
+ 
+/* Some animation to the header logo */
+  text-shadow: 0 0 50px rgb(0, 223, 252),
+              0 0 50px rgb(10, 12, 161),
+              0 0 50px rgb(252, 0, 126),
+              0 0 50px lawngreen,
+              0 0 50px rgb(252, 0, 55);
+  animation: animate 5s linear infinite;
+
+@keyframes: animate {
+      0%{
+          filter :hue-rotate(0deg);
+      }
+filter: hue-rotate(360deg) ;
+}
+ }
+ #main-body{
+  width: 90%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 150px;
+  margin: 60px;
+  margin-top: 150px;
+  margin-left: 150px;
+}
+img {
+ border-radius: 15px;
+ margin: 25px;
+}
+
+ h1{
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 50px;
+  font-size: 35px;
+  color: white;
+  letter-spacing: 5px;
+}
+div button{
+ position:absolute;
+ background-color: #1a7272;
+ border-radius: 5px;
+ transition: 0.3s ease;
+ padding: 10px;
+ margin-left: 25px;
+ margin-top: -45px;
+ font-size: large;
+}  
+ .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #1a7272;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+  
+   /*responsive*/
+input[type=checkbox]{
+    display: none;
+   } 
+   /* humburger menu*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* Querie media */
+   @media screen and (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:rgb(91, 175, 175);
+    right: -150px;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    margin-left: -60px;
+    
+   }
+   .menu li:hover {
+      display: inline-block;
+      background-color:#4c9e9e;
+      transition: 0.3s ease;
+   }
+   .menu li + li {
+      margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+     position: absolute;
+    display: block;
+    font-size: 12px;
+    margin-left: -90px;
+  
+   }
+   .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-top: 25px;
+    padding-left: 10px; 
+  } 
+   
+   h1{
+    position: absolute;
+    margin-left: 20px;main-body
+    font-size: 25px;
+    letter-spacing: normal;
+  }
+  div button{
+    position:absolute;
+    padding: 5px;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: small;
+   }
+   #main-body{
+    width: 50%;
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: block;
+  }
+  
+ h1{
+  margin-top: 100px;
+  margin-left: 50px;
+  letter-spacing: normal;
+}
+#main-body .img{
+  border-radius: 15px;
+  margin: 25px;
+
+}
+
+   }
