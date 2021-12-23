@@ -15,7 +15,6 @@
     list-style: none;
    }
 
-
 .navbar {
     display: flex;
     align-items: center;
@@ -139,7 +138,6 @@ img {
     padding: 5px 14px;
    }
 
-
    /*Dealing with responsive*/
 
 input[type=checkbox]{
@@ -152,42 +150,17 @@ input[type=checkbox]{
     user-select: none;
    }
 
-   /* Login form css  */
-   section{
-    /* position: relative;
-    width: 100%;
-    height: 40vh;
-    display: flex; */
-    }
-    section .profile-box{
-        /* position: relative;
-        width: 25%;
-        height: 69%; */
-        /* background-color: red; */
-      
-}
 section .profile-box img{
     position: absolute;
     top: 350px;
     left: 0; 
-    /* object-fit: cover; */
+
 }
 
 section h3{
-    margin-top: 65px;
-    padding-left: 550px;
-    color: white;
-}
-section .profile-box:before{
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: linear-gradient(255deg, #e91e63, #03a9f4); */
-    z-index: 1;
-    /* mix-blend-mode: screen; */
+    font-size: larger;
+    font-size: 35px;
+    /* width: 1250px; */
 }
 
 section .content-box{
@@ -212,7 +185,8 @@ section .content-box .form-box h2{
     display: inline-block;
 }
 section .content-box .form-box .input-box{
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+   
 }
 section .content-box .form-box .input-box span{
     font-size: 16px;
@@ -222,6 +196,9 @@ section .content-box .form-box .input-box span{
     font-weight: 300;
     font-weight: 16px;
     letter-spacing: 1px;
+    margin-left: 690px;
+    width: 250px;
+    
 }
 section .content-box .form-box .input-box input{
       width: 100%;
@@ -232,27 +209,26 @@ section .content-box .form-box .input-box input{
       font-size: 16px;
       letter-spacing: 1px;
       color: rgb(15, 15, 15);
-      font-size: ;
-      background: transparent;
       border-radius: 30px;
+      background-color: C4C4C4;
 }
 section .content-box .form-box .input-box input[type="submit"]{
-    background: green;
-    color: gainsboro;
+    background:#c4c4c4;
+    color: black;
     outline: none;
     border: none;
     font-weight: 500;
     cursor: pointer;
+    margin-left: 670px;
 }
-section .content-box .form-box .input-box input[type="submit"]:hover{
-    background: #03a9f4;
-}
+
 section .content-box .form-box h3{
-    color: white;
+    color: red;
     text-align: center;
     margin: 80px 0 10px;
     font-weight: 500;
-    margin-left:-550px;
+    margin-left:150px;
+    width: 350px;
 } 
 
    /*Responsive - menu*/
