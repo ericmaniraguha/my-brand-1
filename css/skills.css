@@ -84,8 +84,8 @@ img {
 }
 div button{
  position:absolute;
- background-color: #1a7272;
- border-radius: 5px;
+ background-color:C4C4C4;
+ border-radius: 10px;
  transition: 0.3s ease;
  padding: 10px;
  margin-left: 25px;
