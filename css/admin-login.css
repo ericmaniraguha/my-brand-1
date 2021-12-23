@@ -1,0 +1,320 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: Open Sans;
+    background-color:#135780 ;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fff;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+
+   /* Logo  */
+   .logo {
+    font-size: 32px;
+    /* font-size: 85px; */
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-right: 15px;
+    padding-left: 150px;
+    padding-top: 25px;
+   
+/* Some animation to the header logo */
+    text-shadow: 0 0 50px rgb(0, 223, 252),
+                0 0 50px rgb(10, 12, 161),
+                0 0 50px rgb(252, 0, 126),
+                0 0 50px lawngreen,
+                0 0 50px rgb(252, 0, 55);
+    animation: animate 5s linear infinite;
+
+@keyframes: animate {
+        0%{
+            filter :hue-rotate(0deg);
+        }
+  filter: hue-rotate(360deg) ;
+}
+   }
+
+img {
+
+    margin-top: -120px;
+    border-radius: 15px;
+    width: 150px;
+    margin-left: 150px;
+   
+  }
+
+  .container-main {
+    /* position: absolute; */
+    width: 100%;
+    margin-top: 150px;
+    left: 350px;
+  
+    
+  }
+  .container-main h2{
+    color: white;
+    margin-left: 450px;
+  }
+  
+   p{
+    position: absolute;
+    width: 400px;
+    color: red;
+    margin-top: 150px;
+    margin-left: 250px;
+    letter-spacing: 2px;
+    font-size: 25px;
+  }
+  .container-form {
+    font-family: Open Sans;
+    margin-left: 450px;
+    color: white;
+  }
+ 
+  input[type=text], input[type=password] {
+    width: 250px;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-left: 670px;
+  }
+  
+  button {
+    position: absolute;
+    background-color:#c4c4c4;
+    color:black;
+    padding: 12px 2px;
+    width: 150px;
+    margin-top: 90px ;
+    /* margin-right: 190px; */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  label{
+      margin-left: 650px;
+      
+  }
+  
+  button:hover {
+    background-color: #1a7272;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+   /*Navigations menus*/
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #1a7272;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+
+
+   /*Dealing with responsive*/
+
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+
+   /* Login form css  */
+   section{
+    /* position: relative;
+    width: 100%;
+    height: 40vh;
+    display: flex; */
+    }
+    section .profile-box{
+        /* position: relative;
+        width: 25%;
+        height: 69%; */
+        /* background-color: red; */
+      
+}
+section .profile-box img{
+    position: absolute;
+    top: 350px;
+    left: 0; 
+    /* object-fit: cover; */
+}
+
+section h3{
+    margin-top: 65px;
+    padding-left: 550px;
+    color: white;
+}
+section .profile-box:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(255deg, #e91e63, #03a9f4); */
+    z-index: 1;
+    /* mix-blend-mode: screen; */
+}
+
+section .content-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+section .content-box .form-box{
+    width: 50%;
+
+}
+section .content-box .form-box h2{
+    color:white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid steelblue;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+section .content-box .form-box .input-box{
+    margin-bottom: 20px;
+}
+section .content-box .form-box .input-box span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: white;
+    font-weight: 300;
+    font-weight: 16px;
+    letter-spacing: 1px;
+}
+section .content-box .form-box .input-box input{
+      width: 100%;
+      padding: 10px 20px;
+      outline: none;
+      font-weight: 400;
+      border: 1px solid rgb(247, 243, 243);
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: rgb(15, 15, 15);
+      font-size: ;
+      background: transparent;
+      border-radius: 30px;
+}
+section .content-box .form-box .input-box input[type="submit"]{
+    background: green;
+    color: gainsboro;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+section .content-box .form-box .input-box input[type="submit"]:hover{
+    background: #03a9f4;
+}
+section .content-box .form-box h3{
+    color: white;
+    text-align: center;
+    margin: 80px 0 10px;
+    font-weight: 500;
+    margin-left:-550px;
+} 
+
+   /*Responsive - menu*/
+
+input[type=checkbox]{
+  display: none;
+ } 
+ /*Hamburger */
+ .hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+ }
+ /* mediaqueries*/
+ @media (max-width: 768px) {
+ .menu { 
+  display:none;
+  position: absolute;
+  background-color:teal;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 16px 0;
+ }
+ .menu li:hover {
+  display: inline-block;
+  background-color:#4c9e9e;
+  transition: 0.3s ease;
+ }
+ .menu li + li {
+  margin-top: 12px;
+ }
+ input[type=checkbox]:checked ~ .menu{
+  display: block;
+ }
+ .hamburger {
+  display: block;
+ }
+
+ }
+
+ /* Media of login page in the body */
+@media(max-width: 768px){
+  section .profile-box{
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+  }
+  section .content-box{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+  }
+  section .content-box .form-box{
+      width: 100px;
+      padding: 40px;
+      background:rgb(148, 86, 5);
+      margin: 50px;
+  }
+}
