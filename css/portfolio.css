@@ -1,0 +1,228 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: Open Sans;
+    background-color:#135780 ;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+  
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    color: #fff;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  
+   }
+   .nav-links a {
+    color: #fff;
+  
+    
+   }
+   /* logo*/
+   .logo {
+    font-size: 32px;
+    /* font-size: 85px; */
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-right: 15px;
+    padding-left: 100px;
+    padding-top: 25px;
+   
+   
+  /* Some animation to the header logo */
+    text-shadow: 0 0 50px rgb(0, 223, 252),
+                0 0 50px rgb(10, 12, 161),
+                0 0 50px rgb(252, 0, 126),
+                0 0 50px lawngreen,
+                0 0 50px rgb(252, 0, 55);
+    animation: animate 5s linear infinite;
+  
+  @keyframes: animate {
+        0%{
+            filter :hue-rotate(0deg);
+        }
+  filter: hue-rotate(360deg) ;
+  }
+   }
+   .menu {
+      display: flex;
+      gap: 1em;
+      font-size: 18px;
+     }
+     .menu li:hover {
+      background-color: #1a7272;
+      border-radius: 5px;
+      transition: 0.3s ease;
+     }
+     .menu li {
+      padding: 5px 14px;
+     }
+
+     :root{
+        --white-text:#fff;
+        --background:#c8e8f1;
+        --black-text:rgb(68, 66, 66)	
+        --prueba: (180deg,#21c8f6,#637bff);
+    }
+    
+    .background1-left-column{
+        background: linear-gradient(180deg,#21c8f6,#637bff);
+    }
+    
+    
+    .background2-left-column{
+        background: linear-gradient(180deg ,#6edcc4,#1aab8b);
+    }
+    
+    .background3-left-column{
+        background: linear-gradient(180deg ,#6edcc4,#1aab8b);
+    }
+    .background4-left-column{
+        background: linear-gradient(180deg ,#6edcc4,#1aab8b);
+    }
+    
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+        border: none;
+    }
+    body{
+        background-color: var-(--background);
+        font-family: Arial, Helvetica, sans-serif;
+    
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    
+    }
+    .card{
+         background-color: var(--white-text);
+         border-radius: 1rem;
+         box-shadow: 0.1rem 1rem rgba(0,0,0,0.2);
+         display: flex;
+         margin: 1.5rem;
+         overflow: hidden;
+         width: 30rem;
+         height: 19rem;
+    }
+    .card h6{
+       opacity: 0.6;
+       letter-spacing: 0.1rem;
+    }
+    .card h2{
+        letter-spacing: .1rem;
+        margin: 1rem 0;
+    }
+    .left-column{
+        color: var(--white-text);
+        padding: 2rem;
+        max-width: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left-column h2{
+        color: var(--white-text);
+    }
+    .left-column i{
+        font-size: 5rem;
+    }
+    .right-column{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .right-column p{
+        font-size: .9rem;
+        color: var(--black-text);
+    }
+    .button{
+        border-radius: 3rem;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+        color: var(--white-text);
+        font-size: 1.2rem;
+        padding: .8rem 1.5rem;
+        letter-spacing: .1rem;
+        align-self: flex-end;
+    
+    }
+    
+     /*responsive*/
+  input[type=checkbox]{
+      display: none;
+     } 
+     /* humburger menu*/
+     .hamburger {
+      display: none;
+      font-size: 24px;
+      user-select: none;
+     }
+     /* Querie media */
+     @media screen and (max-width: 768px) {
+     .menu { 
+      display:none;
+      position: absolute;
+      background-color:rgb(91, 175, 175);
+      right: -150px;
+      left: 0;
+      text-align: center;
+      padding: 16px 0;
+      margin-left: -60px;
+      
+     }
+     .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+     }
+     .menu li + li {
+        margin-top: 12px;
+     }
+     input[type=checkbox]:checked ~ .menu{
+      display: block;
+     }
+     .hamburger {
+       position: absolute;
+      display: block;
+      font-size: 12px;
+      margin-left: -90px;
+    
+     }
+     .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: rgb(20, 20, 20);
+      padding-top: 25px;
+      padding-left: 10px; 
+    } 
+     }
+     @media (max-width:1030px) {
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }    
+    }
