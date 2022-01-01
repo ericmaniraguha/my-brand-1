@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact us form</title>
+    <link rel="stylesheet" href="/css/contact-us.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <!-- logo -->
+        <div class="logo">{E}</div>
+        <!-- navigation  -->
+        <ul class="nav-links">
+          <!-- checkbox toggle -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- navigation menu -->
+        <div class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/skills.html">Skills</a></li>
+            <li><a href="../pages/portfolio.html">Portofolio</a></li>
+            <li><a href="../pages/blogs.html">Blogs</a></li>
+            <li><a href="../pages/contact-us.html">Contact</a></li>
+       
+          
+        </div>
+      </ul>
+    </nav>
+    <div class="container">
+        <h2>Contact us </h2>
+        <form action="">
+
+            <div class="wrapper">
+                <div class="box">
+                    <input type="text" name="fname" id="fname" required>
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="box">
+                    <input type="text" name="lname" id="lname" required>
+                    <label for="fname">Last Name</label>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="box">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="box">
+                    <input type="text" name="tel" id="tel" required>
+                    <label for="tel">Mobile Number</label>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="box">
+                    <textarea  id="message" required></textarea>
+                    <label for="message">Type Your message here....</label>
+                </div>
+            </div>
+            <input type="submit" name="" value="Send ">
+            
+            <i class="btn btn-light fa  fa-envelope-square fa-4x" href="#" ><span>ericmaniraguha@gmail.com</span></i>
+            <i class="btn btn-light fa  fa-phone-square fa-4x" href="#" ><span>+250 788 746 696</span></i>
+            <i class="btn btn-light fa fa-linkedin-square fa-4x" href="#"></i>
+            <i class="btn btn-light fa fa-twitter-square fa-4x" href="#"></i>
+            <i class="btn btn-light fa fa-facebook-square fa-4x" href="#"></i>
+            
+            
+        </form>
+    </div>
+</body>
+</html>

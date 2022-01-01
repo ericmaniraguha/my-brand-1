@@ -1,254 +1,232 @@
-/* UTILITIES */
+/* @import url("https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@300;400;500;700;800&display=swap"); */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   }
-   body {
-    font-family: Open Sans;
-    background-color:#135780 ;
-   }
-   a {
-    text-decoration: none;
-   }
-   li {
-    list-style: none;
-   }
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    color: #fff;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-  
-   }
-   .nav-links a {
-    color: #fff;
-     
-   }
-   /* logo*/
-   .logo {
-    font-size: 32px;
-    /* font-size: 85px; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #135780;
+  background-color: #3612d6;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #fff;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+  background-color: #135780;
+  background-color: #3612d6;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+.nav-links a {
+  color: #fff;
+}
+/* logo*/
+.logo {
+  font-size: 32px;
+  /* font-size: 85px; */
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+  padding-right: 15px;
+  padding-left: 100px;
+  padding-top: 25px;
+
+  /* Some animation to the header logo */
+  text-shadow: 0 0 50px rgb(0, 223, 252), 0 0 50px rgb(10, 12, 161),
+    0 0 50px rgb(252, 0, 126), 0 0 50px lawngreen, 0 0 50px rgb(252, 0, 55);
+  animation: animate 5s linear infinite;
+
+  @keyframes: animate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    filter: hue-rotate(360deg);
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: #1a7272;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+.table-container {
+  padding: 0 10%;
+  margin: 40px auto 0px;
+}
+.heading {
+  font-size: 0 10%;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead {
+  background-color: rgb(94, 153, 231);
+}
+.table thead tr th {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color: rgb(250, 253, 253);
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border: 2px solid rgb(30, 30, 31);
+}
+.table tbody tr td {
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: rgb(17, 17, 17);
+  background-color: cadetblue;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid rgb(30, 30, 31);
+}
+.table .text .table tbody tr td {
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: tan;
+  background-color: tomato;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid teal;
+}
+.table .text_open {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.35px;
+  color: rgb(23, 26, 26);
+}
+.table tbody tr td .btn {
+  width: 130px;
+  text-decoration: none;
+  line-height: 35px;
+  display: inline-block;
+  background-color: wheat;
+  font-weight: medium;
+  color: blueviolet;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 14px;
+  opacity: 1;
+}
+.table-container .add-btn {
+  position: absolute;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*responsive*/
+input[type="checkbox"] {
+  display: none;
+}
+/* humburger menu*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+/* Querie media */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    /* background-color: rgb(91, 175, 175); */
+    right: -150px;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    margin-left: -60px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    position: absolute;
+    display: block;
+    font-size: 12px;
+    margin-left: -90px;
+  }
+
+  .logo {
+    font-size: 25px;
     font-weight: bold;
     color: rgb(20, 20, 20);
-    padding-right: 15px;
-    padding-left: 100px;
     padding-top: 25px;
-   
-   
-  /* Some animation to the header logo */
-    text-shadow: 0 0 50px rgb(0, 223, 252),
-                0 0 50px rgb(10, 12, 161),
-                0 0 50px rgb(252, 0, 126),
-                0 0 50px lawngreen,
-                0 0 50px rgb(252, 0, 55);
-    animation: animate 5s linear infinite;
-  
-  @keyframes: animate {
-        0%{
-            filter :hue-rotate(0deg);
-        }
-  filter: hue-rotate(360deg) ;
+    padding-left: 10px;
   }
-   }
- 
-   .menu {
-      display: flex;
-      gap: 1em;
-      font-size: 18px;
-     }
-     .menu li:hover {
-      background-color: #1a7272;
-      border-radius: 5px;
-      transition: 0.3s ease;
-     }
-     .menu li {
-      padding: 5px 14px;
-     }
-
-     /* Table css */
-     .container-table {
-       display: flex;
-       width: 85%;
-       margin: 65px;
-       margin-top: 150px;
-       
-     }
-     .table{
-      width: 100%;
-      border-collapse: collapse;
-  }
-  /* Likes */
-  .likes{
-    
-    color: red;
-    font-size: 1rem;
-    text-align: center;
-
-  }
-  /* button for edit */
-  .edit-btn {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color:black;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: orange;
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
-.edit-btn:hover {
-    background-color: rgba(255, 0, 0, 1);
-}
-
-.edit-btn:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
-}
-
-
-/* Delete Buttons */
-.delete-btn {
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: black;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-  background-color: rgba(220, 0, 0, 1);
-  background-image: linear-gradient(to top left,
-                                    rgba(0, 0, 0, .2),
-                                    rgba(0, 0, 0, .2) 30%,
-                                    rgba(0, 0, 0, 0));
-  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-              inset -2px -2px 3px rgba(0, 0, 0, .6);
-}
-
-.delete-btn:hover {
-  background-color: rgba(255, 0, 0, 1);
-}
-
-.delete-btn:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-}
-  .table td, .table th{
-      padding: 12px 15px;
-      border-radius: 15px;
-      border: 2px solid steelblue;
-      text-align: center;
-      font-size: 16px;
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
   }
-.click-btn button{
-     position: absolute;
-     margin-top: 450px;
-      width: 250px;
-      padding: 15px;
-      color:black;
-      font-size: 16px;
-      font-weight: 600;
-      border-radius: 20px;
-      background-color: darkgrey;
-}
-  .container-table h1{
-    font-size: 25px;
-    color: white;
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
   }
-  .table th{
-      background-color: rgb(210, 235, 228);
-      color: darkcyan;
+  .table tr {
+    margin-bottom: 15px;
   }
-  .table tbody tr:nth-child(even){
-     background-color: rgb(115, 155, 155);
+  .table tbody tr td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
   }
-    tr img{
-      width: 25px;
-      height: 25px;
-    }
-    
-     /*responsive*/
-  input[type=checkbox]{
-      display: none;
-     } 
-     /* humburger menu*/
-     .hamburger {
-      display: none;
-      font-size: 24px;
-      user-select: none;
-     }
-     /* Querie media */
-     @media screen and (max-width: 768px) {
-     .menu { 
-      display:none;
-      position: absolute;
-      background-color:rgb(91, 175, 175);
-      right: -150px;
-      left: 0;
-      text-align: center;
-      padding: 16px 0;
-      margin-left: -60px;
-      
-     }
-     .menu li:hover {
-        display: inline-block;
-        background-color:#4c9e9e;
-        transition: 0.3s ease;
-     }
-     .menu li + li {
-        margin-top: 12px;
-     }
-     input[type=checkbox]:checked ~ .menu{
-      display: block;
-     }
-     .hamburger {
-       position: absolute;
-      display: block;
-      font-size: 12px;
-      margin-left: -90px;
-    
-     }
-     .logo {
-      font-size: 25px;
-      font-weight: bold;
-      color: rgb(20, 20, 20);
-      padding-top: 25px;
-      padding-left: 10px; 
-    } 
-     
+  .table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
   }
-
-/* Responsive for the table*/
-@media (max-width: 500px) {
-  .table thead{
-      display: none;
-      width: 100%;
-  }
-  .table tr{
-      text-align: right;
-      padding-left: 50%;
-      position: relative;
-  }
-  .table td::before{
-      content: attr(data-label);
-      position: absolute;
-      left: 0;
-      width: 60%;
-      padding-left: 15px;
-      font-size: 15px;
-      font-weight: bold;
-      text-align: left;
+  .table-container {
+    padding: 0 10%;
+    margin: 120px auto 0px;
   }
 }

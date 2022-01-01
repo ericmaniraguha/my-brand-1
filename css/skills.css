@@ -1,21 +1,22 @@
-/* UTILITIES */
+/* @import url("https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@300;400;500;700;800&display=swap"); */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- }
- body {
-  font-family: Open Sans;
-  background-color:#135780 ;
- }
+}
+body {
+  font-family: "Roboto slab" sans-serif;
+  z-index: 10;
+  background-color: #135780;
+  background-color: #3612d6;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
  a {
   text-decoration: none;
  }
  li {
   list-style: none;
  }
-
-
 .navbar {
   display: flex;
   align-items: center;
@@ -25,12 +26,15 @@
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-
+ 
+  z-index: 10;
+  background-color: #135780;
+  background-color: #3612d6;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
  }
  .nav-links a {
   color: #fff;
 
-  
  }
  /* logo*/
  .logo {
@@ -57,22 +61,9 @@
       }
 filter: hue-rotate(360deg) ;
 }
+ 
  }
- #main-body{
-  width: 90%;
-  height: 200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 150px;
-  margin: 60px;
-  margin-top: 150px;
-  margin-left: 150px;
-}
-img {
- border-radius: 15px;
- margin: 25px;
-}
+ 
 
  h1{
   position: absolute;
@@ -82,16 +73,64 @@ img {
   color: white;
   letter-spacing: 5px;
 }
-div button{
- position:absolute;
- background-color:C4C4C4;
- border-radius: 10px;
- transition: 0.3s ease;
- padding: 10px;
- margin-left: 25px;
- margin-top: -45px;
- font-size: large;
-}  
+
+ul.social-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  margin: 160px;
+  padding: 0;
+  height: auto;
+  width: auto;
+  gap: 25px;
+}
+ul.social-set li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+a.sociali {
+  font-size: 55px;
+  line-height: 25px;
+  padding: 10px;
+  color: #fff;
+  margin-right: 30px;
+  margin-bottom: 30px !important;
+  padding-bottom: 10px !important;
+}
+a.sociali:hover,
+a.sociali:focus {
+  background: #6d8785;
+}
+
+div .btn-experience {
+  position:absolute;
+  padding: 10px 70px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: -105px;
+  margin-left: 20px;
+} 
+
  .menu {
     display: flex;
     gap: 1em;
@@ -106,7 +145,7 @@ div button{
     padding: 5px 14px;
    }
   
-   /*responsive*/
+
 input[type=checkbox]{
     display: none;
    } 
@@ -121,13 +160,15 @@ input[type=checkbox]{
    .menu { 
     display:none;
     position: absolute;
-    background-color:rgb(91, 175, 175);
-    right: -150px;
+    /* background-color:rgb(91, 175, 175); */
+    right: -250px;
     left: 0;
     text-align: center;
     padding: 16px 0;
-    margin-left: -60px;
-    
+    margin-left: 0px;
+    z-index: 1;
+    line-height: 10px;
+
    }
    .menu li:hover {
       display: inline-block;
@@ -144,7 +185,7 @@ input[type=checkbox]{
      position: absolute;
     display: block;
     font-size: 12px;
-    margin-left: -90px;
+    margin-left: -120px;
   
    }
    .logo {
@@ -152,25 +193,29 @@ input[type=checkbox]{
     font-weight: bold;
     color: rgb(20, 20, 20);
     padding-top: 25px;
-    padding-left: 10px; 
+    padding-left: 40px; 
   } 
-   
+   .social{
+     
+     margin-top: 280px;
+    
+   }
    h1{
     position: absolute;
     margin-left: 20px;main-body
     font-size: 25px;
     letter-spacing: normal;
   }
-  div button{
+  div .btn-experience{
     position:absolute;
-    padding: 5px;
-    margin-left: 25px;
-    margin-top: 10px;
-    font-size: small;
+    padding: 6px;
+    margin-left: 65px;
+     margin-top: -120px;
+    font-weight: 600;
+    margin-bottom: 0px;
    }
    #main-body{
     width: 50%;
-    background-color: red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -180,14 +225,142 @@ input[type=checkbox]{
   }
   
  h1{
-  margin-top: 100px;
-  margin-left: 50px;
+  margin-top: -40px;
+  margin-left: 150px;
   letter-spacing: normal;
+  font-size: 30px;
 }
 #main-body .img{
   border-radius: 15px;
   margin: 25px;
 
 }
+@media (max-width:560px){
+  .menu { 
+    display:none;
+    position: absolute;
+    right: -30px;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    margin-left: -60px;
+    z-index: 1;
+    line-height: 7px;
+    font-size: 10px;
 
    }
+  .hamburger {
+    position: absolute;
+   display: block;
+   font-size: 14px;
+   margin-left: -200px;
+ 
+  }
+  h1{
+    margin-left: 70px;
+    letter-spacing: normal;
+    font-size: 20px;
+  }
+  .social{
+    width: 500px;
+  }
+ 
+  .sociali img{
+    width: 35px;
+    height: 35px;
+   
+  }
+  ul.social-set {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin-top: 100px;
+    margin-left: 5px;
+    margin-right: 25px;
+    padding: 0;
+    height: 3px;
+    z-index: -1;
+  
+  }
+  ul.social-set li {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div .btn-experience{
+    position:absolute;
+    padding: 6px;
+    margin-left: 25px;
+     margin-top: -100px;
+    font-weight: 600;
+    margin-top: 290px;
+   }
+}
+@media (max-width:360px){
+  .menu { 
+    display:none;
+    position: absolute;
+    right: -150px;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    margin-left: -60px;
+    z-index: 1;
+    line-height: 7px;
+    font-size: 10px;
+
+   }
+  .hamburger {
+    position: absolute;
+   display: block;
+   font-size: 14px;
+   margin-left: -150px;
+ 
+  }
+  h1{
+    margin-left: 70px;
+    letter-spacing: normal;
+    font-size: 20px;
+  }
+  .social{
+    width: 500px;
+  }
+ 
+  .sociali img{
+    width: 35px;
+    height: 35px;
+   
+  }
+  ul.social-set {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin-top: 100px;
+    margin-left: 5px;
+    margin-right: 25px;
+    padding: 0;
+    height: 3px;
+    z-index: -1;
+  
+  }
+  ul.social-set li {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div .btn-experience{
+    position:absolute;
+    padding: 6px;
+    margin-left: 25px;
+     margin-top: -100px;
+    font-weight: 600;
+    margin-top: 290px;
+   }
+}
+}
