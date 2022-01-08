@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="UTF-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="../css/admin-login.css" />
-   <title>admin login page</title>
- </head>
- <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/admin-login.css" />
+    <title>admin login page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">{E}</div>
 
-   <nav class="navbar">
-     <!-- Logo -->
-     <div class="logo">{E}</div>
-     <!-- navigations -->
-     <ul class="nav-links">
-       <!-- check toggle -->
-       <input type="checkbox" id="checkbox_toggle" />
-       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-       <!-- navigation menu -->
-       <div class="menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/admin-articles-dashboard.html" style="color: red;">Logout</a></li>
-   
+      <ul class="nav-links">
+        <!-- check toggle -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- navigation menu -->
+        <div class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="../pages/admin-articles-dashboard.html" style="color: red"
+              >Logout</a
+            >
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- body part login form code -->
+
+    <section>
+      <!-- <h3>Admin Page</h3> -->
+      <div class="profile-box">
+        <img src="../img/profile.PNG" alt="profile" />
       </div>
-     </ul>
-   </nav>
 
-   <!-- body part login form code -->
-       
-  <section>
-    <!-- <h3>Admin Page</h3> -->
-    <div class="profile-box">
-         <img src="../img/profile.PNG" alt="profile">
-    </div>
+      <div class="content-box">
+        <div class="form-box">
+          <h2>Admin Login Form</h2>
+          <form>
+            <div class="input-box">
+              <span>Security Message: </span><input type="text" name="name" />
+            </div>
 
-    <div class="content-box">
-         <div class="form-box">
-              <h2>Admin Login Form </h2>
-              <form>
+            <div class="input-box">
+              <span>Password:</span>
+              <input type="password" name="password" />
+            </div>
 
-                 <div class="input-box">
-                      <span>Security Message: </span><input type="text" name="name">
-                 </div>
-
-                 <div class="input-box"><span>Password:</span>
-                      <input type="password" name="password">
-                 </div>
-
-                
-                <div class="input-box">
-                    <a href="../pages/admin-articles-dashboard.html" > <input type="submit" value="Login " name="" ></a><br> <br> 
-               </div>
-                
-              </form>
-         </div>
-    </div>
-
-</section>
-  
- </body>
+            <div class="input-box">
+              <a href="../pages/admin-articles-dashboard.html">
+                <input type="submit" value="Login " name="" /></a
+              ><br />
+              <br />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

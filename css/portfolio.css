@@ -78,7 +78,7 @@ h1 {
 }
 .card {
   display: grid;
-  grid-template-columns:250px;
+  grid-template-columns: 250px;
   grid-template-rows: 180px 210px 90px;
   grid-template-areas: "image" "text" "stats";
 
@@ -97,7 +97,6 @@ h1 {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
- 
 }
 .card-text .date {
   grid-area: text;
@@ -247,14 +246,13 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 13px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 210px;
   }
   .card-stats {
     width: 205px;
   }
 }
-
 
 /*  */
 /* Querie media */
@@ -310,7 +308,7 @@ input[type="checkbox"] {
     height: 570px;
     overflow-y: scroll;
   }
-  h1{
+  h1 {
     margin-top: -450px;
     font-size: 35px;
   }
@@ -326,7 +324,7 @@ input[type="checkbox"] {
     margin-left: 105px;
     width: 250px;
   }
-  .card .date{
+  .card .date {
     font-size: 18px;
   }
   .card p {
@@ -337,15 +335,13 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 13px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 450px;
   }
   .card-stats {
     width: 450px;
   }
 }
-
-
 
 /*  */
 @media screen and (width: 320px) {
@@ -420,15 +416,13 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 13px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 280px;
   }
   .card-stats {
     width: 280px;
   }
 }
-
-
 
 /*  411 and 414*/
 @media screen and (width: 411px) {
@@ -500,14 +494,13 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 13px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 240px;
   }
   .card-stats {
     width: 240px;
   }
 }
-
 
 /*   414*/
 @media screen and (width: 414px) {
@@ -579,14 +572,13 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 13px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 240px;
   }
   .card-stats {
     width: 240px;
   }
 }
-
 
 /*  */
 @media screen and (width: 375px) {
@@ -661,14 +653,13 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 13px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 330px;
   }
   .card-stats {
     width: 330px;
   }
 }
-
 
 /*  */
 @media screen and (width: 280px) {
@@ -744,7 +735,7 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 15px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 250px;
   }
   .card-stats {
@@ -826,7 +817,7 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 15px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 480px;
   }
   .card-stats {
@@ -872,7 +863,7 @@ input[type="checkbox"] {
     padding-top: 35px;
     padding-left: 5px;
   }
- 
+
   h1 {
     position: absolute;
     margin-top: -388px;
@@ -888,7 +879,7 @@ input[type="checkbox"] {
     height: 1070px;
     overflow-y: scroll;
   }
-  h1{
+  h1 {
     margin-top: -950px;
     font-size: 35px;
   }
@@ -903,9 +894,8 @@ input[type="checkbox"] {
     font-size: 25px;
     margin-left: 105px;
     width: -250px;
-  
   }
-  .card .date{
+  .card .date {
     font-size: 30px;
   }
   .card p {
@@ -916,11 +906,10 @@ input[type="checkbox"] {
   .card-stats > div {
     font-size: 25px;
   }
-  .card .card-image{
+  .card .card-image {
     width: 600px;
   }
   .card-stats {
     width: 600px;
-
   }
 }
