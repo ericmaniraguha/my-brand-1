@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@300;400;500;700;800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@300;400;500;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -221,293 +221,9 @@ input[type="checkbox"] {
   user-select: none;
 }
 
-/* max-width: 569px */
-@media (max-width: 569px) {
-  .menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    padding: 10px 0;
-    margin-left: 250px;
-    font-size: 10px;
-    line-height: 3px;
-  }
-  .menu li:hover {
-    display: inline-block;
-    background-color: #4c9e9e;
-    transition: 0.3s ease;
-  }
-  .menu li + li {
-    margin-top: 10px;
-    /* margin-left: -300px; */
-  }
-  input[type="checkbox"]:checked ~ .menu {
-    display: block;
-  }
-  .hamburger {
-    position: absolute;
-    display: block;
-    margin-left: -400px;
-    font-size: 12px;
-
-    z-index: 10;
-    background-color: #135780;
-    background-color: #3612d6;
-    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-  }
-
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(20, 20, 20);
-    padding-right: 15px;
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-
-  .flex-container {
-    margin-top: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 360px;
-  }
-
-  .flex-container .para {
-    padding: 10px 20px;
-    width: 90%;
-  }
-  .para h2 {
-    position: absolute;
-    line-height: 26px;
-    margin-top: 180px;
-    margin-left: 200px;
-    font-size: 12px;
-  }
-  .para h2 span {
-    font-size: 15px;
-  }
-  .para .back {
-    margin-left: 640px;
-  }
-  .para p {
-    margin-top: 45px;
-  }
-  /* comments */
-  .flex-container .read-comment {
-    width: 90%;
-  }
-  .flex-container .container {
-    width: 90%;
-    border: 2px solid #333;
-    padding: 15px 10px;
-  }
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(3, 107, 133);
-  }
-}
-
-/* width:540 */
-@media (width: 540px) {
-  .menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    padding: 10px 0;
-    margin-left: 450px;
-    font-size: 10px;
-    line-height: 3px;
-  }
-  .menu li:hover {
-    display: inline-block;
-    background-color: #4c9e9e;
-    transition: 0.3s ease;
-  }
-  .menu li + li {
-    margin-top: 10px;
-    /* margin-left: -300px; */
-  }
-  input[type="checkbox"]:checked ~ .menu {
-    display: block;
-  }
-  .hamburger {
-    position: absolute;
-    display: block;
-    margin-left: -200px;
-    font-size: 12px;
-
-    z-index: 10;
-    background-color: #135780;
-    background-color: #3612d6;
-    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-  }
-
-  .flex-container {
-    margin-top: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-  }
-
-  /* comments */
-  .flex-container .read-comment {
-    width: 90%;
-  }
-  .flex-container .container {
-    width: 90%;
-    border: 2px solid #333;
-    padding: 15px 10px;
-  }
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(3, 107, 133);
-  }
-}
-
-/* width:280px */
-
-@media (width: 280px) {
-  .menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    padding: 10px 0;
-    margin-left: 170px;
-    font-size: 10px;
-    line-height: 3px;
-  }
-  .menu li:hover {
-    display: inline-block;
-    background-color: #4c9e9e;
-    transition: 0.3s ease;
-  }
-  .menu li + li {
-    margin-top: 10px;
-    /* margin-left: -300px; */
-  }
-  input[type="checkbox"]:checked ~ .menu {
-    display: block;
-  }
-  .hamburger {
-    position: absolute;
-    display: block;
-    margin-left: -455px;
-    font-size: 12px;
-
-    z-index: 10;
-    background-color: #135780;
-    background-color: #3612d6;
-    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-  }
-
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(20, 20, 20);
-    padding-right: 15px;
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-
-  .flex-container {
-    margin-top: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 270px;
-  }
-
-  .flex-container .para {
-    padding: 10px 20px;
-    width: 90%;
-  }
-  .para h2 {
-    position: absolute;
-    line-height: 26px;
-    margin-top: 0px;
-    margin-left: 200px;
-    font-size: 12px;
-  }
-  .para h2 span {
-    font-size: 15px;
-  }
-  .para .back {
-    margin-left: 640px;
-  }
-  .para p {
-    margin-top: 45px;
-  }
-  /* comments */
-  .flex-container .read-comment {
-    width: 90%;
-  }
-  .flex-container .container {
-    width: 90%;
-    border: 2px solid #333;
-    padding: 15px 10px;
-  }
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(3, 107, 133);
-  }
-}
-
 /* max-width 768 */
 
-@media (width: 768px) {
+@media screen and  (max-width: 768px) {
   .menu {
     display: none;
     position: absolute;
@@ -515,8 +231,8 @@ input[type="checkbox"] {
     text-align: center;
     padding: 10px 0;
     margin-left: 250px;
-    font-size: 10px;
-    line-height: 3px;
+    font-size: 18px;
+    line-height: 5px;
   }
   .menu li:hover {
     display: inline-block;
@@ -533,14 +249,11 @@ input[type="checkbox"] {
   .hamburger {
     position: absolute;
     display: block;
-    margin-left: -400px;
-    font-size: 12px;
+    margin-left: -350px;
+    font-size: 18px;
 
     z-index: 10;
-    background-color: #135780;
-    background-color: #3612d6;
-    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-  }
+     }
 
   .logo {
     font-size: 20px;
@@ -558,6 +271,110 @@ input[type="checkbox"] {
     justify-content: center;
     align-items: center;
     width: 360px;
+  }
+
+  .flex-container .para {
+    padding: 10px 20px;
+    width: 90%;
+  }
+  .para h2 {
+    position: absolute;
+    line-height: 26px;
+    margin-top: 180px;
+    margin-left: 200px;
+    font-size: 12px;
+  }
+  .para h2 span {
+    font-size: 15px;
+  }
+  .para .back {
+    margin-left: 640px;
+  }
+  .para p {
+    margin-top: 45px;
+  }
+  /* comments */
+  .flex-container .read-comment {
+    width: 90%;
+  }
+  .flex-container .container {
+    width: 90%;
+    border: 2px solid #333;
+    padding: 15px 10px;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(3, 107, 133);
+  }
+}
+
+
+/* 820 */
+
+
+@media screen and  (width: 820px) {
+  .menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    padding: 30px 0;
+    margin-left: 680px;
+    font-size: 22px;
+    line-height: 10px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 10px;
+    /* margin-left: -300px; */
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    position: absolute;
+    display: block;
+    margin-left: -40px;
+    font-size: 35px;
+
+    z-index: 10;
+     }
+
+  .logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    padding-right: 15px;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .flex-container {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 760px;
   }
 
   .flex-container .para {
