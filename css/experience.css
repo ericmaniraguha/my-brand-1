@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto+Slab:wght@300;400;500;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Eczar&family=Licorice&family=Lora&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto slab" sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #135780;
   background-color: #0cbaba;
   background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
@@ -24,9 +25,9 @@ li {
   justify-content: space-between;
   padding: 15px;
   color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
 
   background-color: #135780;
   background-color: #0cbaba;
@@ -113,7 +114,7 @@ input[type="checkbox"] {
 .info-03,
 .info-04,
 .info-05 {
-  font-size: large;
+  font-size: small;
   width: 600;
 }
 
@@ -168,6 +169,7 @@ label span {
   margin-left: 20px;
 }
 
+
 /* Querie media max-width:767 */
 @media screen and (max-width: 767px) {
   .nav-links .menu {
@@ -199,9 +201,9 @@ label span {
     justify-content: space-between;
     padding: 15px;
     color: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
     z-index: 10;
   }
   .nav-links .hamburger {
@@ -222,57 +224,59 @@ label span {
     background-color: rgba(196, 196, 196, 1);
     border-radius: 15px;
     width: 250px;
+  
   }
-  .main-container {
+  .main-container{
     height: 650px;
     width: 100%;
   }
-  p {
+  p{
     display: none;
   }
 
-  .info-01 .para {
-    width: 330px;
-    margin-left: -255px;
-    font-size: 15px;
-    font-weight: 600;
-    margin-top: 25px;
+  .info-01 .para{
+      width: 330px;
+      margin-left: -255px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 25px;
   }
 
-  .info-02 .para-2 {
+  .info-02 .para-2{
     margin-top: 90px;
     width: 320px;
     margin-left: -5px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-  }
-  .info-03 .para-3 {
-    margin-top: 124px;
-    width: 360px;
-    margin-left: -20px;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .info-04 .para-4 {
-    margin-top: 180px;
-    width: 320px;
-    margin-left: -10px;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .info-05 .para-5 {
-    margin-top: 240px;
-    width: 350px;
-    margin-left: -15px;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  label {
-    position: absolute;
-    background-color: none;
-    border-radius: 15px;
-    width: 250px;
-  }
+}
+.info-03 .para-3{
+  margin-top: 124px;
+  width: 360px;
+  margin-left: -20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.info-04 .para-4{
+  margin-top: 180px;
+  width: 320px;
+  margin-left: -10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.info-05 .para-5{
+  margin-top: 240px;
+  width: 350px;
+  margin-left: -15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+label {
+  position: absolute;
+  background-color: none;
+  border-radius: 15px;
+  width: 250px;
+
+}
 
   label span {
     display: inline-flex;
@@ -286,19 +290,22 @@ label span {
     margin-top: 100px;
     gap: 35px;
     line-height: 18px;
-  }
 
-  .main-container .left-side {
-    position: absolute;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 600px;
-    display: inline-flex;
-    gap: 25px;
   }
+  
+.main-container .left-side {
+  position: absolute;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 600px;
+  display: inline-flex;
+  gap: 25px;
+ 
+}
+
 }
 /* 768 */
 /* Querie media width:768 */
@@ -344,57 +351,59 @@ label span {
     background-color: rgba(196, 196, 196, 1);
     border-radius: 15px;
     width: 550px;
+  
   }
-  .main-container {
+  .main-container{
     height: 650px;
     z-index: 1;
   }
-  p {
+  p{
     display: none;
   }
 
-  .info-01 .para {
-    width: 530px;
-    margin-left: -255px;
-    font-size: 25px;
-    font-weight: 600;
-    margin-top: 25px;
+  .info-01 .para{
+      width: 530px;
+      margin-left: -255px;
+      font-size: 25px;
+      font-weight: 600;
+      margin-top: 25px;
   }
 
-  .info-02 .para-2 {
+  .info-02 .para-2{
     margin-top: 90px;
     width: 530px;
     margin-left: -5px;
     font-size: 25px;
     font-weight: 600;
-  }
-  .info-03 .para-3 {
-    margin-top: 124px;
-    width: 600px;
-    margin-left: -10px;
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .info-04 .para-4 {
-    margin-top: 180px;
-    width: 530px;
-    margin-left: -10px;
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .info-05 .para-5 {
-    margin-top: 240px;
-    width: 550px;
-    margin-left: -15px;
-    font-size: 25px;
-    font-weight: 600;
-  }
-  label {
-    position: absolute;
-    background-color: none;
-    border-radius: 15px;
-    width: 250px;
-  }
+}
+.info-03 .para-3{
+  margin-top: 124px;
+  width: 600px;
+  margin-left: -10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.info-04 .para-4{
+  margin-top: 180px;
+  width: 530px;
+  margin-left: -10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.info-05 .para-5{
+  margin-top: 240px;
+  width: 550px;
+  margin-left: -15px;
+  font-size: 25px;
+  font-weight: 600;
+}
+label {
+  position: absolute;
+  background-color: none;
+  border-radius: 15px;
+  width: 250px;
+
+}
 
   label span {
     display: inline-flex;
@@ -408,21 +417,24 @@ label span {
     margin-top: 100px;
     gap: 35px;
     line-height: 18px;
-  }
 
-  .main-container .left-side {
-    position: absolute;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 600px;
-    display: inline-flex;
-    font-size: 25px;
-    font-weight: 600;
-    gap: 25px;
   }
+  
+.main-container .left-side {
+  position: absolute;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 600px;
+  display: inline-flex;
+  font-size: 25px;
+  font-weight: 600;
+  gap: 25px;
+ 
+}
+
 }
 
 /* 540 */
@@ -458,9 +470,9 @@ label span {
     justify-content: space-between;
     padding: 15px;
     color: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
     z-index: 10;
   }
   .nav-links .hamburger {
@@ -481,58 +493,60 @@ label span {
     background-color: rgba(196, 196, 196, 1);
     border-radius: 15px;
     width: 250px;
+  
   }
-  .main-container {
+  .main-container{
     height: 650px;
     width: 100%;
     margin-left: 89px;
   }
-  p {
+  p{
     display: none;
   }
 
-  .info-01 .para {
-    width: 330px;
-    margin-left: -255px;
-    font-size: 15px;
-    font-weight: 600;
-    margin-top: 25px;
+  .info-01 .para{
+      width: 330px;
+      margin-left: -255px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 25px;
   }
 
-  .info-02 .para-2 {
+  .info-02 .para-2{
     margin-top: 90px;
     width: 320px;
     margin-left: -5px;
     font-size: 15px;
     font-weight: 600;
-  }
-  .info-03 .para-3 {
-    margin-top: 124px;
-    width: 360px;
-    margin-left: -20px;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .info-04 .para-4 {
-    margin-top: 180px;
-    width: 320px;
-    margin-left: -10px;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .info-05 .para-5 {
-    margin-top: 240px;
-    width: 350px;
-    margin-left: -15px;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  label {
-    position: absolute;
-    background-color: none;
-    border-radius: 15px;
-    width: 250px;
-  }
+}
+.info-03 .para-3{
+  margin-top: 124px;
+  width: 360px;
+  margin-left: -20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.info-04 .para-4{
+  margin-top: 180px;
+  width: 320px;
+  margin-left: -10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.info-05 .para-5{
+  margin-top: 240px;
+  width: 350px;
+  margin-left: -15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+label {
+  position: absolute;
+  background-color: none;
+  border-radius: 15px;
+  width: 250px;
+
+}
 
   label span {
     display: inline-flex;
@@ -546,17 +560,19 @@ label span {
     margin-top: 100px;
     gap: 35px;
     line-height: 18px;
-  }
 
-  .main-container .left-side {
-    position: absolute;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 600px;
-    display: inline-flex;
-    gap: 25px;
   }
+  
+.main-container .left-side {
+  position: absolute;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 600px;
+  display: inline-flex;
+  gap: 25px;
+ 
+}
 }

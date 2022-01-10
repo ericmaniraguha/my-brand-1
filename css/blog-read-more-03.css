@@ -223,7 +223,7 @@ input[type="checkbox"] {
 
 /* max-width 768 */
 
-@media screen and (max-width: 768px) {
+@media screen and  (max-width: 768px) {
   .menu {
     display: none;
     position: absolute;
@@ -250,13 +250,13 @@ input[type="checkbox"] {
     position: absolute;
     display: block;
     margin-left: -350px;
-    font-size: 18px;
+    font-size: 25px;
 
     z-index: 10;
-  }
+     }
 
   .logo {
-    font-size: 20px;
+    font-size: 35px;
     font-weight: bold;
     color: rgb(20, 20, 20);
     padding-right: 15px;
@@ -323,9 +323,11 @@ input[type="checkbox"] {
   }
 }
 
+
 /* 820 */
 
-@media screen and (width: 820px) {
+
+@media screen and  (width: 820px) {
   .menu {
     display: none;
     position: absolute;
@@ -355,7 +357,7 @@ input[type="checkbox"] {
     font-size: 35px;
 
     z-index: 10;
-  }
+     }
 
   .logo {
     font-size: 35px;

@@ -24,9 +24,9 @@ li {
   justify-content: space-between;
   padding: 15px;
   color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
 
   background-color: #135780;
   background-color: #3612d6;
