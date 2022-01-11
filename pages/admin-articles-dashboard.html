@@ -1,123 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/admin-articles-dashboard.css" />
+    <<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin-articles-dashboard.css">
     <title>Admin Dashboard - Articles</title>
-  </head>
-  <body>
+</head>
+<body>
+
     <nav class="navbar">
-      <!-- logo -->
-      <div class="logo">{E}</div>
-      <!-- navigation  -->
-      <ul class="nav-links">
-        <!-- checkbox toggle -->
-        <input type="checkbox" id="checkbox_toggle" />
-        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-        <!-- navigation menu -->
+        <!-- logo -->
+        <div class="logo">{E}</div>
+        <!-- navigation  -->
+        <ul class="nav-links">
+          <!-- checkbox toggle -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- navigation menu -->
         <div class="menu">
           <li><a href="/index.html">Home</a></li>
-          <li>
-            <a href="/pages/admin-update-form.html" style="color: red"
-              >Logout</a
-            >
-          </li>
+          <li><a href="/pages/admin-update-form.html" style="color: red;">Logout</a></li>
+       
+          
         </div>
       </ul>
     </nav>
 
+
     <div class="table-container">
-      <h1 class="heading">Articles' Dashboard</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Article Number</th>
-            <th>Article Title</th>
-            <th>Published Date</th>
-            <th>Likes</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="number">1.</td>
-            <td data-label="title">Key of JavaScript</td>
-            <td data-label="date">1 Jan 2021</td>
-            <td data-label="likes">+152</td>
-            <td data-label="Edit">
-              <a href="/pages/admin-update-form.html" class="btn"
-                >Edit<i class="material-icons">edit</i></a
-              >
-            </td>
-            <td data-label="Delete">
-              <a href="#" class="btn"
-                >Delete<i class="material-icons">delete</i></a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td data-label="number">2.</td>
-            <td data-label="title">Key of JavaScript</td>
-            <td data-label="date">1 Jan 2021</td>
-            <td data-label="likes">+152</td>
-            <td data-label="Edit">
-              <a href="/pages/admin-update-form.html" class="btn"
-                >Edit<i class="material-icons">edit</i></a
-              >
-            </td>
-            <td data-label="Delete">
-              <a href="#" class="btn"
-                >Delete<i class="material-icons">delete</i></a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td data-label="number">3.</td>
-            <td data-label="title">Key of JavaScript</td>
-            <td data-label="date">1 Jan 2021</td>
-            <td data-label="likes">+152</td>
-            <td data-label="Edit">
-              <a href="/pages/admin-update-form.html" class="btn"
-                >Edit<i class="material-icons">edit</i></a
-              >
-            </td>
-            <td data-label="Delete">
-              <a href="#" class="btn"
-                >Delete<i class="material-icons">delete</i></a
-              >
-            </td>
-          </tr>
-          <tr>
-            <td data-label="number">4.</td>
-            <td data-label="title">Key of JavaScript</td>
-            <td data-label="date">1 Jan 2021</td>
-            <td data-label="likes">+152</td>
-            <td data-label="Edit">
-              <a href="/pages/admin-update-form.html" class="btn"
-                >Edit<i class="material-icons">edit</i></a
-              >
-            </td>
-            <td data-label="Delete">
-              <a href="#" class="btn"
-                >Delete<i class="material-icons">delete</i></a
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <br />
-      <a href="/pages/admin-update-form.html"
-        ><button class="add-btn">Publish Article</button></a
-      >
+        <h1 class="heading">Articles' Dashboard </h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Article Number</th>
+                    <th>Article Title</th>
+                    <th>Published Date</th>
+                    <th>Likes</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="number">1.</td>
+                <td data-label="title">Key of JavaScript </td>
+                <td data-label="date">1 Jan 2021</td>
+                <td data-label="likes">+152</td>
+                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
+                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
+              </tr>
+              <tr>
+                <td data-label="number">2.</td>
+                <td data-label="title">Key of JavaScript </td>
+                <td data-label="date">1 Jan 2021</td>
+                <td data-label="likes">+152</td>
+                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
+                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
+              </tr>
+              <tr>
+                <td data-label="number">3.</td>
+                <td data-label="title">Key of JavaScript </td>
+                <td data-label="date">1 Jan 2021</td>
+                <td data-label="likes">+152</td>
+                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
+                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
+              </tr>
+              <tr>
+                <td data-label="number">4.</td>
+                <td data-label="title">Key of JavaScript </td>
+                <td data-label="date">1 Jan 2021</td>
+                <td data-label="likes">+152</td>
+                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
+                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
+              </tr>
+             
+            </tbody>
+    
+        </table>
+       <br> <a href="/pages/admin-update-form.html"><button class="add-btn">Publish Article</button></a>
     </div>
-  </body>
+    
+</body>
 </html>
