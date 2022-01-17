@@ -102,7 +102,7 @@ li {
   padding: 20px;
 }
 .wrapper .box input {
-  width: 100%;
+  width: 90%;
   font-size: 20px;
   background-color: transparent;
   border: none;
@@ -131,7 +131,7 @@ li {
   padding: 0;
 }
 .wrapper .box textarea {
-  width: 100%;
+  width: 95%;
   font-size: 20px;
   background-color: transparent;
   border: none;
@@ -149,7 +149,7 @@ li {
 .wrapper .box textarea:valid ~ label {
   padding: 0;
 }
-.container input[type="submit"] {
+.container input[type="submit"], input[type="reset"] {
   background-color: darkcyan;
   padding: 10px 25px;
   border: none;
@@ -157,6 +157,7 @@ li {
   font-size: 15px;
   border-radius: 6px;
   cursor: pointer;
+  margin: 15px;
 }
 .fa-4x {
   color: skyblue;
@@ -208,7 +209,7 @@ input[type=checkbox]{
  .hamburger {
    position: absolute;
   display: block;
-  font-size: 10px;
+  font-size: 20px;
   margin-left: -20px;
   line-height: 5px;
 
@@ -265,7 +266,7 @@ input[type=checkbox]{
   padding: 10px;
   transition: 0.5s linear;
 }
-.container input[type="submit"] {
+.container input[type="submit"]  {
   position: absolute;
   margin-top: -50px;
   background-color: darkcyan;
@@ -273,6 +274,19 @@ input[type=checkbox]{
   font-size: 12px;
 
 }
+.container input[type="reset"]  {
+  position: relative;
+  margin-top: -50px;
+  background-color: darkcyan;
+  padding: 5px 15px;
+  font-size: 12px;
+
+}
+
+ span a{
+  color: skyblue;
+ }
+
 .fa-4x {
   color: skyblue;
   margin-left: 9px;
@@ -284,9 +298,6 @@ input[type=checkbox]{
 }
 
 
-
-
-
 @media (max-width: 1200px) {
   .title {
     flex-direction: row;
@@ -296,8 +307,7 @@ input[type=checkbox]{
   }
   .title .left-side {
     width: 100%;
-    /* justify-content: flex-start; */
-    /* padding: 40px 0px 40px 40px; */
+
   }
 
   .main-container {

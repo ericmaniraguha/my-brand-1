@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet"
    href="https://fonts.googleapis.com/css?family=Tangerine">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
    <title>Blogs page - 1</title>
    <link rel="stylesheet" href="../css/blog-read-more-01.css">
@@ -51,36 +52,48 @@
   
                     Free version: Yes! It’s free for writers. (Clients pay to tap into that network.)
                     Free version: Yes! It’s free for writers. (Clients pay to tap into that network.)</p> <br><br>
-                    <a href="/pages/blogs.html"><span class="back">back</span></a> 
+                    
+                    <div class="voting">
+                      <button id="likebtn">
+                        <i class="fa fa-thumbs-up"></i>
+                      </button>
+                      <input type="number" id="input1" value="0" />
+                
+                      <button id="dislikebtn">
+                        <i class="fa fa-thumbs-down"></i>
+                      </button>
+                      <input type="number" id="input2" value="0" />
+                    </div>
+                    <a href="/pages/blogs.html" class="back-blog"><span class="back">back</span></a> 
             </div>
              <!-- comments form  -->
             <div class="container">
                     <h2>Leave us a comment</h2>
-                    <form action="">
-                        <textarea placeholder="Add your comment"></textarea>
+                    <form action="" >
+                        <textarea placeholder="Add your comment" class="comment-input"></textarea>
                        <div class="btn">
-                        <input type="submit" value="Comment">
-                        <button>Cancel</button>
+                        <input type="submit" value="Post Comment" class="comment-submit">
+                        <button type="reset" class="comment-cancel">Cancel</button>
                        </div>
                     </form>
             </div>
 
             <div class="read-comment">
-                <h2><span class="title">Read Comments</span></h2>
-                <p><span  class="date">29/12/2021 6:41 09 at 6:41 09 pm</span>
-                   This is the comment of how you are viewing my page, leave something here again and again...  </p>
-    
-                <p><span class="date">29/12/2021 6:41 09 at 6:41 09 pm</span>
-                        This is the comment of how you are viewing my page, leave something here again and again.... </p>
-    
-                <p><span class="date">29/12/2021 6:41 09 at 6:41 09 pm</span>
-                            This is the comment of how you are viewing my page, leave something here again and again....  </p>
-    
-                 <p><span class="date">29/12/2021 6:41 09 at 6:41 09 pm</span>
-                                This is the comment of how you are viewing my page, leave something here again and again.... </p>
-                
-            </div>
-  </div>
- 
+                <h2><span class="title">Read Comments </span></h2>
+                <div class="comments">
+                  <div class="">
+                    <img
+                      class="comment-avatar"src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+                    />
+                    <div>
+                      <h3 class="comment-author">Eric Maniraguha</h3> <br> <br>
+                      <p class="comment-body">Your idea is important to us.....</p> 
+                    </div>
+                  </div>
+                </div>
+               <script src="../main/comment-blog.js"></script>
+         </div>
+
+   
  </body>
 </html>
