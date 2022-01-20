@@ -23,19 +23,20 @@
           <!-- navigation menu -->
         <div class="menu">
          
-            <button class="btn-logout" onclick="Logout();" >Logout</button>
-         
+            <button class="btn-logout"  id="logout" >Logout</button>       
         </div>
       </div>
     </nav>
 
+
+    
     
 <div class="container">
   <div class="title">
     Update and Upload articles
   </div>
   <div class="card-body">
-    <form class="form"  id='myform'>
+    <form class="form"  id='myform' onsubmit="ceatBlog(event)">
 
       <div class="inputfield">
          <label>Name of the Publisher</label>
@@ -48,13 +49,8 @@
     </div> 
  
        <div class="inputfield">
-         <label>Select Date</label>
-         <input type="date" class="input" id="date" id="image" >
-      </div>  
- 
-       <div class="inputfield">
          <label>Upload Image</label>
-         <input type="file" class="input" >
+         <input type="file" id="image"  >
       </div> 
      
      <div class="inputfield">
@@ -64,7 +60,7 @@
      
     
      <div class="inputfield">
-       <input type="submit" value="Publish" class="btn" id="submit"><br>
+       <input type="submit" value="Publish" class="btn" ><br>
        <a href="" style="color:brown;">Back</a>
      </div>
     </form>
@@ -81,11 +77,12 @@
                     <th>Article Title</th>
                     <th>Likes</th>
                     <th>Published Date</th>
+                    <th>content</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
             </thead>
-            <tbody id='dynamicHere'>
+            <tbody id='showUsers'>
                <!-- <tr>
                 <td data-label="number">1.</td>
                 <td data-label="title">Key of JavaScript </td>
@@ -101,5 +98,7 @@
         </table>
     </div>
     <script src="../main/admin-dashboard-update.js"></script>
+   
+    <script src="../main/admin-logout.js"></script>
 </body>
 </html>

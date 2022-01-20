@@ -30,8 +30,12 @@ function Adminlogin(event) {
         if (localStorage.getItem("user")) {
             const user = JSON.parse(localStorage.getItem("user"));
             if (user.email == emailInput.value && user.password == passwordInput.value) {
-                window.location.replace("http://127.0.0.1:5500/my-brand/pages/admin-articles-dashboard.html");
+                window.location.href="admin-articles-dashboard.html";
             }
+            else {
+                alert("Please, put valid credintial");
+            }
+           
         } else {
             const obj = {
                 email: emailInput.value,
@@ -39,7 +43,7 @@ function Adminlogin(event) {
                 islogin: true
             }
             localStorage.setItem("user", JSON.stringify(obj));
-            window.location.replace("http://127.0.0.1:5500/my-brand/pages/admin-articles-dashboard.html");
+            window.location.href = "admin-articles-dashboard.html";
         }
 
     }

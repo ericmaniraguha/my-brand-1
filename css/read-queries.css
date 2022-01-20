@@ -89,21 +89,29 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 150px;
     
   }
   
   .column {
     flex: 60%;
     padding: 20px;
-    border: 1px solid black;
-    margin: 35px;
-    color: white;
-    gap: 25px;
-  }
-  .column h2{
-      margin-bottom: 20px;
+    
+    border: 20px solid transparent;
+	  -moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	  -webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+	  border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+	  border-image-slice: 1;
 
+    margin-top: 50px;
+    color: white;
+    margin-left: -200px;
+    margin-right: 150px;
+  
+  }
+  .row h2{
+      margin-bottom: 20px;
+      margin-left: 150px;
   }
   
   @media screen and (max-width: 992px) {
