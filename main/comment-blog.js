@@ -15,22 +15,23 @@ var today = formatAMPM();
 
 // likes 
 let likebtn = document.querySelector("#likebtn");
-let displikebtn = document.querySelector("#displikebtn");
+let dislikebtn = document.querySelector("#displikebtn");
 
 let input1 = document.querySelector("#input1");
 let input2 = document.querySelector("#input2");
 
 likebtn.addEventListener("click", () => {
   input1.value = parseInt(input1.value) + 1;
-  input2.style.color = "green";
+  input1.style.color = "green";
 });
 
   dislikebtn.addEventListener("click", () => {
   input2.value = parseInt(input2.value) + 1;
-  input.style.color = "red";
+  input2.style.color = "red";
 });
 
 // 
+
 
 function template(data) {
   commentList.insertAdjacentHTML("beforeend", `

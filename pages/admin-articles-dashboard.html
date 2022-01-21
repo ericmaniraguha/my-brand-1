@@ -22,8 +22,17 @@
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <!-- navigation menu -->
         <div class="menu">
+           
+          <a href="../pages/read-queries.html">
+            <button class="btn-logout"  style="padding: 10px 5px;">Read Queries</button>
+          </a>
+
+            <a href="../pages/admin-articles-dashboard.html">
+              <button class="btn-logout"  style="padding: 10px 5px;">Create Blog</button>
+            </a>
          
-            <button class="btn-logout"  id="logout" >Logout</button>       
+              <button class="btn-logout"  id="logout" style="color: red;padding: 10px 5px;" >Logout</button>  
+            
         </div>
       </div>
     </nav>
@@ -74,15 +83,14 @@
             <thead>
                 <tr>
                     <th>Article Number</th>
+                    <th>Publisher</th>
                     <th>Article Title</th>
-                    <th>Likes</th>
                     <th>Published Date</th>
-                    <th>content</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
             </thead>
-            <tbody id='showUsers'>
+            <tbody >
                <!-- <tr>
                 <td data-label="number">1.</td>
                 <td data-label="title">Key of JavaScript </td>
@@ -98,7 +106,6 @@
         </table>
     </div>
     <script src="../main/admin-dashboard-update.js"></script>
-   
     <script src="../main/admin-logout.js"></script>
 </body>
 </html>

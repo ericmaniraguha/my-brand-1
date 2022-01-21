@@ -33,6 +33,7 @@ function Contact(event) {
 
     else {
         var obj = {
+            id: uuidv4(),
             Fname: fname.value,
             Lname: lname.value,
             Email: email.value,

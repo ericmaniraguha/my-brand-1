@@ -1,7 +1,4 @@
-
-    
-    
-    var url;
+var url;
     document.querySelector("#image").addEventListener("change", function() {
         const image = new FileReader();
         image.readAsDataURL(this.files[0]);
@@ -10,10 +7,12 @@
         })
     });
 
+    
+let datePost = new Date().toDateString();
+
 
 function ceatBlog(event) {
     event.preventDefault();
-
 
     var authorName = document.getElementById('authorName');
     var articleName = document.getElementById('articleName');
@@ -27,7 +26,7 @@ function ceatBlog(event) {
     var articleName_invalid = document.getElementById("articleName_invalid");
     var message_invalid = document.getElementById("message");
 
-    if (authorName.value == "" && articleName.value == "" && image.value == "" && message.value == "") {
+    if (authorName.value == "" || articleName.value == "" || image.value == "" || message.value == "") {
         authorName.style.border = "solid 1px red";
         image.style.border = "solid 1px red";
         message.style.border = "solid 1px red";
@@ -43,9 +42,8 @@ function ceatBlog(event) {
             authorName: authorName.value,
             articleName: articleName.value,
             message: message.value,
-            image: url,
-            comments: [],
-            like: 0
+            date: datePost,
+            image: url
         }
         let bloges = localStorage.getItem("article");
         if (bloges) {
@@ -63,3 +61,85 @@ function ceatBlog(event) {
         }
     }
 }
+
+const posts = JSON.parse(localStorage.getItem("article"));
+var tbody = document.querySelector("tbody");
+
+function displayPost(index) {
+    for (let index = 0; index < posts.length; index++) {
+      
+        const tr = document.createElement("tr");
+        const td1 = document.createElement("td");
+        td1.textContent = index + 1;
+
+        const td2 = document.createElement("td");
+        td2.textContent = posts[index].authorName;
+
+        const td3 = document.createElement("td");
+        td3.textContent = posts[index].articleName;
+
+        const td4 = document.createElement("td");
+        td4.textContent = posts[index].date;
+
+
+        const td5 = document.createElement("div");
+        const editButton = document.createElement("edit");
+
+        editButton.setAttribute("class", "edit");
+
+        const label = document.createElement("div");   
+
+        label.textContent = "Edit Button";
+
+        editButton.appendChild(label);
+        editButton.addEventListener("click", editPost)
+        td5.appendChild(editButton);
+        td5.style.cursor = "pointer";
+        td5.style.background = "grey";
+    
+         //delete button
+        const td6 = document.createElement("td");
+        const delButton = document.createElement("de");
+        
+         delButton.setAttribute("class", "delete");
+         const deleteLabel = document.createElement("div");
+        
+         deleteLabel.textContent = "Delete Button";
+         delButton.appendChild(deleteLabel);
+         td6.appendChild(delButton);
+
+        td6.style.color = "brown"
+        td6.style.cursor = "pointer";
+        
+         td6.addEventListener("click", deleteArticle)
+         td6.style.cursor = "pointer";
+        
+           tr.append(td1, td2, td3, td4, td5, td6);
+           tbody.appendChild(tr);
+          
+           function deleteArticle() {
+               let postTodelete;
+               const del = confirm("Please, Do you agree to delete ?")
+               if (del === true) {
+                   if (localStorage.getItem("article") === null) {
+                       postTodelete = [];
+                   } else {
+                       postTodelete = JSON.parse(localStorage.getItem("article"))
+                   }
+               }
+               postTodelete.splice(index, 1);
+               localStorage.setItem("article", JSON.stringify(postTodelete));
+               tbody.textContent = "";
+               displayPost();
+               location.reload();
+               alert("deleted successfull")
+        }      
+         //edit articles
+         function editPost() {
+             location.assign(`../pages/admin-articles-dashboard.html#${index}`);
+             
+
+        }
+    }
+}
+displayPost();

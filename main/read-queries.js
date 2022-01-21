@@ -1,10 +1,10 @@
 const queryCollection = document.querySelector('.column');
-var q = localStorage.getItem('queries'); // the one we setted for item 
+var q = localStorage.getItem('queries'); 
 var splitObj = JSON.parse(q);
 
 var msg = splitObj.sort().reverse();
 
-function display(doc) {
+function display(messageUser) {
     
     let div = document.createElement('div');
     div.setAttribute('class', 'query');
@@ -13,14 +13,17 @@ function display(doc) {
     let p = document.createElement('p');
     let hr = document.createElement('hr'); 
     let btn = document.createElement('button');
+    btn.setAttribute("value", messageUser.id);
+    btn.setAttribute("id", "deleteButton");
     btn.innerHTML = "Delete";
     let span = document.createElement('span');
 
 
-    h4.textContent = doc.Fname;
-    h4.textContent = doc.Lname;
-    p.textContent = doc.Message;
-    span.textContent = doc.Email;
+
+    h4.textContent = messageUser.Fname;
+    h4.textContent = messageUser.Lname;
+    p.textContent = messageUser.Message;
+    span.textContent = messageUser.Email;
     
     div.append(br);
     div.append(br);
@@ -43,7 +46,12 @@ function display(doc) {
     
     div.append(hr);
 
-    queryCollection.appendChild(div)
+    queryCollection.appendChild(div);
+    document.querySelector("#deleteButton").addEventListener('click',
+        function (e) { 
+            console.log(e.getAttribute("value"))
+        }
+    );
 }
 msg.forEach(messages => {
     display(messages);

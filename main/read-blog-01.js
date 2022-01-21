@@ -6,11 +6,13 @@ var blog1 = document.querySelector('.flex-container');
 const getblog = JSON.parse(localStorage.getItem("article"));
 var Readmessage = getblog[id];
 
+var dateTest = new Intl.DateTimeFormat('en-GB').format(date);
+
 blog1.innerHTML = `
 <div class="para">
-<h2 class="title"><span>Published on 15th july, 2021</span> <br> Author : Eric M.</h2>
+<h2 class="title"><span>${dateTest}</span> <br> ${Readmessage.authorName}</h2>
 <div class="image"> </div>  
-      <h3>How ICT is powering the world....</h3> <br> <br>
+      <h3>${Readmessage.articleName}</h3> <br> <br>
    
 <p>${Readmessage.message}</p> <br><br>
     

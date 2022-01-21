@@ -114,12 +114,12 @@ body {
   /* margin-right: 150px; */
 }
 .blog-text span {
-  color: rgb(7, 7, 7);
-  font-size: 0.9rem;
+  color: rgb(255, 251, 251);
+  font-size: 1.2rem;
 }
 .blog-box {
   width: 300px;
-  height: 520px;
+  height: 500px;
 }
 .blog-img img {
   width: 100%;
@@ -134,9 +134,10 @@ body {
 }
 
 .blog-text .blog-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500px;
   color: white;
+  text-decoration: none;
 }
 .blog-text .blog-title:hover {
   color: red;
@@ -153,7 +154,12 @@ body {
   margin: 20px 0px;
 }
 .blog-text a {
-  color: black;
+  color: rgb(253, 250, 250);
+  font-size: 15px;
+  text-decoration: underline;
+}
+.blog-text a:hover{
+  color: #0cbaba;
 }
 
 .menu {

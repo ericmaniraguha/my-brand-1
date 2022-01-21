@@ -14,8 +14,8 @@ function viewer(info, idx) {
     </div>
 
     <div class="blog-text">
-        <span>${info.article}</span>
-        <a href="blog-read-more-01.html?id=${idx}" class="blog-title">${info.author}</a>
+        <span>Article Name : ${info.articleName}</span>
+        <a href="blog-read-more-01.html?id=${idx}" class="blog-title">Author : ${info.authorName}</a>
         <p> ${info.message}</p>
         <a href="blog-read-more-01.html?id=${idx}">Read more</a>
     </div>
