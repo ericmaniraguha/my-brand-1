@@ -84,7 +84,7 @@ function displayPost(index) {
 
 
         const td5 = document.createElement("div");
-        const editButton = document.createElement("edit");
+        const editButton = document.createElement("button");
 
         editButton.setAttribute("class", "edit");
 
@@ -135,12 +135,46 @@ function displayPost(index) {
             location.reload();
             alert("deleted successfull")
         }
-        //edit articles
-        function editPost() {
-            location.assign(`../pages/admin-articles-dashboard.html#${index}`);
+        // editarticles
+        function editPost(event) {
+            // location.assign(`../pages/admin-articles-dashboard.html#${index}`);
+            const formContainer = document.getElementById('myform');
+            const publish = document.getElementById("publish");
+       console.log(event.target.parentElement.parentElement.parentElement.firstChild.textContent)
 
+            let retrieved=JSON.parse(localStorage.getItem('article'));
+            authorName.value = retrieved[index].authorName;
+            articleName.value = retrieved[index].articleName;
+            message.value = retrieved[index].message;
 
+            // image.value = retrieved[index].imageUrl;
+            // formContainer.classList.toggle('open-modal');
+            // finalImageUrl=(chosenImage)?chosenImage:image.value;
+                    // console.log(`this is final imageUrl ${finalImageUrl}`);
+                    
+            publish.addEventListener('click',(e)=>{
+                e.preventDefault();
+                console.log(e.target.textContent)
+                retrieved[index].authorName=authorName.value;
+                retrieved[index].articleName = articleName.value;
+                retrieved[index].message = message.value;
+                // retrieved[index].imageUrl = image.value;
+                
+                            
+                localStorage.setItem('article',JSON.stringify(retrieved));
+                // alert.style.display = 'block';
+                // alert.style.backgroundColor='lightgreen';
+                // alert.innerHTML = `Article updated successfully`;
+                setTimeout(() => {
+                formContainer.classList.toggle('open-modal');
+                window.location.reload();
+                }, 2000);
+            })
+           }
+    
         }
+
     }
-}
+
+// editPost();
 displayPost();

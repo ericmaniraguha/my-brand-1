@@ -17,12 +17,10 @@ function viewer(info, idx) {
         <span>Article Name : ${info.articleName}</span>
         <a href="blog-read-more-01.html?id=${idx}" class="blog-title">Author : ${info.authorName}</a>
         <p> ${info.message}</p>
-        <a href="blog-read-more-01.html#${info.id}">Read more</a>
+        <a href="blog-read-more-01.html#${info.idx}">Read more</a>
     </div>
 
-</div>
-
-`;
+</div>`;
     divBlog.appendChild(div);
 
 }
