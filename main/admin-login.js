@@ -2,6 +2,9 @@ localStorage.setItem("user", JSON.stringify({
     email: "admin@gmail.com",
     password: "pass123"
 }))
+if (JSON.parse(localStorage.getItem("isLogedIn"))) {
+    window.location.href = "admin-articles-dashboard.html";
+}
 function Adminlogin(event) {
     event.preventDefault();
     const email = event.target.elements.email.value
