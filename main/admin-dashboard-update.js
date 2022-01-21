@@ -1,13 +1,13 @@
 var url;
-    document.querySelector("#image").addEventListener("change", function() {
-        const image = new FileReader();
-        image.readAsDataURL(this.files[0]);
-        image.addEventListener("load", () => {
-            url = image.result;
-        })
-    });
+document.querySelector("#image").addEventListener("change", function () {
+    const image = new FileReader();
+    image.readAsDataURL(this.files[0]);
+    image.addEventListener("load", () => {
+        url = image.result;
+    })
+});
 
-    
+
 let datePost = new Date().toDateString();
 
 
@@ -18,9 +18,9 @@ function ceatBlog(event) {
     var articleName = document.getElementById('articleName');
     var message = document.getElementById('message');
     var image = document.getElementById('image');
-   
+
     console.log(authorName)
-    
+
     var image_invalid = document.getElementById("image_invalid");
     var authorName_invalid = document.getElementById("authorName_invalid");
     var articleName_invalid = document.getElementById("articleName_invalid");
@@ -39,6 +39,7 @@ function ceatBlog(event) {
 
     } else {
         var obj = {
+            id: uuidv4(),
             authorName: authorName.value,
             articleName: articleName.value,
             message: message.value,
@@ -67,7 +68,7 @@ var tbody = document.querySelector("tbody");
 
 function displayPost(index) {
     for (let index = 0; index < posts.length; index++) {
-      
+
         const tr = document.createElement("tr");
         const td1 = document.createElement("td");
         td1.textContent = index + 1;
@@ -87,7 +88,7 @@ function displayPost(index) {
 
         editButton.setAttribute("class", "edit");
 
-        const label = document.createElement("div");   
+        const label = document.createElement("div");
 
         label.textContent = "Edit Button";
 
@@ -96,48 +97,48 @@ function displayPost(index) {
         td5.appendChild(editButton);
         td5.style.cursor = "pointer";
         td5.style.background = "grey";
-    
-         //delete button
+
+        //delete button
         const td6 = document.createElement("td");
         const delButton = document.createElement("de");
-        
-         delButton.setAttribute("class", "delete");
-         const deleteLabel = document.createElement("div");
-        
-         deleteLabel.textContent = "Delete Button";
-         delButton.appendChild(deleteLabel);
-         td6.appendChild(delButton);
+
+        delButton.setAttribute("class", "delete");
+        const deleteLabel = document.createElement("div");
+
+        deleteLabel.textContent = "Delete Button";
+        delButton.appendChild(deleteLabel);
+        td6.appendChild(delButton);
 
         td6.style.color = "brown"
         td6.style.cursor = "pointer";
-        
-         td6.addEventListener("click", deleteArticle)
-         td6.style.cursor = "pointer";
-        
-           tr.append(td1, td2, td3, td4, td5, td6);
-           tbody.appendChild(tr);
-          
-           function deleteArticle() {
-               let postTodelete;
-               const del = confirm("Please, Do you agree to delete ?")
-               if (del === true) {
-                   if (localStorage.getItem("article") === null) {
-                       postTodelete = [];
-                   } else {
-                       postTodelete = JSON.parse(localStorage.getItem("article"))
-                   }
-               }
-               postTodelete.splice(index, 1);
-               localStorage.setItem("article", JSON.stringify(postTodelete));
-               tbody.textContent = "";
-               displayPost();
-               location.reload();
-               alert("deleted successfull")
-        }      
-         //edit articles
-         function editPost() {
-             location.assign(`../pages/admin-articles-dashboard.html#${index}`);
-             
+
+        td6.addEventListener("click", deleteArticle)
+        td6.style.cursor = "pointer";
+
+        tr.append(td1, td2, td3, td4, td5, td6);
+        tbody.appendChild(tr);
+
+        function deleteArticle() {
+            let postTodelete;
+            const del = confirm("Please, Do you agree to delete ?")
+            if (del === true) {
+                if (localStorage.getItem("article") === null) {
+                    postTodelete = [];
+                } else {
+                    postTodelete = JSON.parse(localStorage.getItem("article"))
+                }
+            }
+            postTodelete.splice(index, 1);
+            localStorage.setItem("article", JSON.stringify(postTodelete));
+            tbody.textContent = "";
+            displayPost();
+            location.reload();
+            alert("deleted successfull")
+        }
+        //edit articles
+        function editPost() {
+            location.assign(`../pages/admin-articles-dashboard.html#${index}`);
+
 
         }
     }

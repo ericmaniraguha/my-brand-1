@@ -1,6 +1,12 @@
+const blogId = location.hash.split("").slice(1).join("")
+const articles = JSON.parse(localStorage.getItem("article"))
+let article = articles.filter((item) => {
+  return item.id === blogId
+})
+article = article[0]
+console.log(article)
 const urlParams = new URLSearchParams(location.search);
 var id = urlParams.get("id");
-
 var blog1 = document.querySelector('.flex-container');
 
 const getblog = JSON.parse(localStorage.getItem("article"));
