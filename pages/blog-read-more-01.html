@@ -39,21 +39,19 @@
  <div class="flex-container">
           
              <!-- comments form  -->
-            <!-- <div class="container">
+            <div class="container">
                     <h2>Leave us a comment</h2>
-                    <form action="" >
-                      <input type="text" name="name" id="name" placeholder="Your Name" >
+                    <form action="POST" onsubmit="commentPost(event)" id="form">
+                      <input type="text" name="name" id="name-input" placeholder="Your Name" >
                       
-                        <textarea placeholder="Add your comment" class="comment-input"></textarea>
+                        <textarea placeholder="Add your comment" class="comment-input" id="comment-input"></textarea>
                        <div class="btn">
                         <input type="submit" value="Post Comment" class="comment-submit">
                         <button type="reset" class="comment-cancel">Cancel</button>
                        </div>
                     </form>
-            </div> -->
-
-
-            
+            </div>
+           
             <!-- <div class="read-comment">
                 <h2><span class="title">Read Comments </span></h2>
                 <div class="comments">
@@ -68,6 +66,8 @@
                   </div>
                 </div> -->
                <script src="../main/comment-blog.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+   
          </div>
 
    <!-- <script src="../main/protect-page.js"></script> -->

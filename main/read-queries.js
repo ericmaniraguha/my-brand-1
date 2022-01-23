@@ -7,8 +7,10 @@ msg.forEach((messageUser) => {
     let div = document.createElement('div');
     div.setAttribute('class', 'query');
     let h4 = document.createElement('h4');
+    let h3 = document.createElement('h3');
     let br = document.createElement('br');
-    let geo = document.createElement('p')
+    let geo = document.createElement('p');
+    let h6 = document.createElement('h6');
     let p = document.createElement('p');
     let hr = document.createElement('hr');
     let btn = document.createElement('button');
@@ -20,6 +22,7 @@ msg.forEach((messageUser) => {
     h4.textContent = messageUser.Fname;
     h4.textContent = messageUser.Lname;
     geo.textContent = messageUser.location;
+    h6.textContent = messageUser.Time;
     p.textContent = messageUser.Message;
     span.textContent = messageUser.Email;
 
@@ -27,15 +30,22 @@ msg.forEach((messageUser) => {
     div.append(br);
     div.append(br);
 
-    div.appendChild(h4).style.textTransform = "uppercase";
+    div.appendChild(h4).style.textTransform = "capitalize";
+   
     
     div.appendChild(p);
     div.appendChild(geo).style.color = "grey";
     div.appendChild(geo).style.cursor = "pointer";
+    div.appendChild(geo).style.fontSize = "12px";
+
+    div.appendChild(h6);
+    div.appendChild(h6).style.color = "grey";
+    
 
     div.appendChild(span).style.color = "blue";
     div.appendChild(span).style.cursor = "pointer";
     div.appendChild(span).style.textDecorationLine = "underline";
+    div.appendChild(span).style.fontSize = "12px";
     div.append(br);
 
     div.appendChild(btn).style.color = "back";

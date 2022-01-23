@@ -197,7 +197,7 @@ button:active {
   outline: none;
   transition: 0.5s;
 }
-#name{
+#name-input{
   height: 20px;
   width: 50%;
   border: none;
