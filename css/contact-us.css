@@ -109,6 +109,8 @@ li {
   outline: none;
   border-bottom: 1px solid cyan;
   transition: 0.5s linear;
+  -webkit-appearance: none;
+  
 }
 .wrapper .box input:focus,
 .wrapper .box input:focus {

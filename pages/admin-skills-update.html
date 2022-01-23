@@ -22,18 +22,15 @@
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <!-- navigation menu -->
         <div class="menu">
-           
-        
-          <li><a href="../pages/admin-skills-update.html">Update Skills</a></li>
+       
+              <li><a href="../pages/admin-skills-update.html">Update Skills</a></li>
 
-          <li><a href="../pages/admin-articles-dashboard.html">Create Blogs</a></li>
-
-          <li><a href="../pages/read-queries.html">Read Queries</a></li>
-
-          <li><a href="../pages/admin-login.html" style="color: red;" id="logout">Logout</a></li>
-
-         
-          
+              <li><a href="../pages/admin-articles-dashboard.html">Create Blogs</a></li>
+    
+              <li><a href="../pages/read-queries.html">Read Queries</a></li>
+    
+              <li><a href="../pages/admin-login.html" style="color: red;" id="logout">Logout</a></li>
+            
         </div>
       </div>
     </nav>
@@ -43,31 +40,30 @@
     
 <div class="container">
   <div class="title">
-    Update and Upload articles
+    Skills Upload Dashboard
   </div>
   <div class="card-body">
-    <form class="form"  id='myform' onsubmit="ceatBlog(event)">
+    <form class="form"  id='myform' onsubmit="createSkills(event)">
 
       <div class="inputfield">
-         <label>Name of the Publisher</label>
-         <input type="text" class="input" id="authorName" >
-      </div> 
-      
+         <label>Hover Text</label>
+         <input type="text" class="input" id="hoverText" >
+      </div>
+      <br><br>
+
       <div class="inputfield">
-       <label>Article Title</label>
-       <input type="text" class="input" id="articleName">
-    </div> 
- 
+        <label>Description Text</label>
+        <input type="text" class="input" id="descrText" >
+     </div>
+
+     <br><br>
+
        <div class="inputfield">
-         <label>Upload Image</label>
+         <label>Upload Icon</label>
          <input type="file" id="image"  >
       </div> 
      
-     <div class="inputfield">
-         <label>Article Edit Form</label>
-         <textarea class="textarea" id="message"></textarea>
-      </div> 
-     
+      <br><br><br><br>
     
      <div class="inputfield">
        <input type="submit" value="Publish" class="btn" id="publish" ><br>
@@ -79,14 +75,14 @@
 </div>
 
     <div class="table-container">
-        <h1 class="heading">Articles' Dashboard </h1>
+        <h1 class="heading">List of Skills uploaded </h1>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Article Number</th>
-                    <th>Publisher</th>
-                    <th>Article Title</th>
-                    <th>Published Date</th>
+                    <th>Skills Number</th>
+                    <th>Skills Name</th>
+                    <th>Info</th>
+                    <th>Uploaded Date</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -108,7 +104,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
     <script src="../main/protect-page.js"></script>
-    <script src="../main/admin-dashboard-update.js"></script>
+    <script src="../main/admin-skills-page.js"></script>
     <script src="../main/admin-logout.js"></script>
 </body>
 </html>

@@ -36,6 +36,7 @@
   text-align: center;
   border: 1px solid rgb(30, 30, 31);
 }
+
 .table .text .table tbody tr td {
   font-size: 14px;
   letter-spacing: 0.35px;
@@ -101,7 +102,7 @@ input[type="checkbox"] {
   .menu li:hover {
     display: inline-block;
     background-color: #4c9e9e;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
   }
   .menu li + li {
     margin-top: 12px;

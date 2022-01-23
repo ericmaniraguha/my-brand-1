@@ -3,19 +3,23 @@ var q = localStorage.getItem('queries');
 var splitObj = JSON.parse(q);
 var msg = splitObj.sort().reverse();
 msg.forEach((messageUser) => {
+
     let div = document.createElement('div');
     div.setAttribute('class', 'query');
     let h4 = document.createElement('h4');
     let br = document.createElement('br');
+    let geo = document.createElement('p')
     let p = document.createElement('p');
     let hr = document.createElement('hr');
     let btn = document.createElement('button');
     btn.setAttribute("value", messageUser.id);
     btn.setAttribute("id", "deleteButton");
     btn.innerHTML = "Delete";
+    
     let span = document.createElement('span');
     h4.textContent = messageUser.Fname;
     h4.textContent = messageUser.Lname;
+    geo.textContent = messageUser.location;
     p.textContent = messageUser.Message;
     span.textContent = messageUser.Email;
 
@@ -24,7 +28,10 @@ msg.forEach((messageUser) => {
     div.append(br);
 
     div.appendChild(h4).style.textTransform = "uppercase";
+    
     div.appendChild(p);
+    div.appendChild(geo).style.color = "grey";
+    div.appendChild(geo).style.cursor = "pointer";
 
     div.appendChild(span).style.color = "blue";
     div.appendChild(span).style.cursor = "pointer";

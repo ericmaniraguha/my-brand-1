@@ -59,9 +59,15 @@ li {
 }
 
 .container {
-  max-width: 1325px;
+  max-width: 1005px;
   margin: 20px auto;
   margin-top: 120px;
+  height:450px ;
+  background-color: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 .container h1{
@@ -71,6 +77,7 @@ li {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+ 
 }
 
 .gallery-item {
@@ -78,6 +85,7 @@ li {
   height: 70px;
   margin: 40px;
   text-decoration: none;
+
 
 }
 

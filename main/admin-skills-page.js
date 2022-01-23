@@ -7,56 +7,51 @@ document.querySelector("#image").addEventListener("change", function () {
     })
 });
 
-
 let datePost = new Date().toDateString();
 
-
-
-function ceatBlog(event) {
+function createSkills(event) {
     event.preventDefault();
 
-    var authorName = document.getElementById('authorName');
-    var articleName = document.getElementById('articleName');
-    var message = document.getElementById('message');
+    var hoverText = document.getElementById('hoverText');
+    var descrText = document.getElementById('descrText');
     var image = document.getElementById('image');
 
-
     var image_invalid = document.getElementById("image_invalid");
-    var authorName_invalid = document.getElementById("authorName_invalid");
-    var articleName_invalid = document.getElementById("articleName_invalid");
-    var message_invalid = document.getElementById("message");
+    var hoverText_invalid = document.getElementById("hoverText_invalid");
+    var descrText_invalid = document.getElementById("descrText_invalid");
 
-    if (authorName.value == "" || articleName.value == "" || image.value == "" || message.value == "") {
-        authorName.style.border = "solid 1px red";
+    if (hoverText.value == "" ||image.value == "" || descrText.value == "") {
+        hoverText.style.border = "solid 1px red";
         image.style.border = "solid 1px red";
-        message.style.border = "solid 1px red";
-        articleName.style.border = "solid 1px red";
+   
 
         image_invalid.style.display = "block";
-        authorName_invalid.style.display = "block";
-        message_invalid.style.display = "block";
-        articleName_invalid.style.display = "block";
+        hoverText_invalid.style.display = "block";
+
+        descrText_invalid.style.display = "block";
+        descrText.style.border = "solid 1px red";
+       
+      
 
     } else {
         var obj = {
             id: uuidv4(),
-            authorName: authorName.value,
-            articleName: articleName.value,
-            message: message.value,
+            hoverText: hoverText.value,
+            descrText: descrText.value,
             date: datePost,
             image: url,
         
         }
-        let bloges = localStorage.getItem("article");
+        let bloges = localStorage.getItem("skillsPage");
         if (bloges) {
             var converBlog = JSON.parse(bloges);
             converBlog.push(obj);
-            localStorage.setItem("article", JSON.stringify(converBlog));
+            localStorage.setItem("skillsPage", JSON.stringify(converBlog));
             alert("created well");
             window.location.reload();
         } else {
             var blogArray = [obj];
-            localStorage.setItem("article", JSON.stringify(blogArray));
+            localStorage.setItem("skillsPage", JSON.stringify(blogArray));
             console.log(blogArray);
             alert("created well");
             window.location.reload();
@@ -64,7 +59,7 @@ function ceatBlog(event) {
     }
 }
 
-const posts = JSON.parse(localStorage.getItem("article"));
+const posts = JSON.parse(localStorage.getItem("skillsPage"));
 var tbody = document.querySelector("tbody");
 
 function displayPost(index) {
@@ -75,10 +70,10 @@ function displayPost(index) {
         td1.textContent = index + 1;
 
         const td2 = document.createElement("td");
-        td2.textContent = posts[index].authorName;
+        td2.textContent = posts[index].hoverText;
 
         const td3 = document.createElement("td");
-        td3.textContent = posts[index].articleName;
+        td3.textContent = posts[index].hoverText;
 
         const td4 = document.createElement("td");
         td4.textContent = posts[index].date;
@@ -113,50 +108,45 @@ function displayPost(index) {
         td6.style.color = "brown"
         td6.style.cursor = "pointer";
 
-        td6.addEventListener("click", deleteArticle)
+        td6.addEventListener("click", deleteSkills)
         td6.style.cursor = "pointer";
 
         tr.append(td1, td2, td3, td4, td5, td6);
         tbody.appendChild(tr);
 
-        function deleteArticle() {
+        function deleteSkills() {
             let postTodelete;
             const del = confirm("Please, Do you agree to delete ?")
             if (del === true) {
-                if (localStorage.getItem("article") === null) {
+                if (localStorage.getItem("skillsPage") === null) {
                     postTodelete = [];
                 } else {
-                    postTodelete = JSON.parse(localStorage.getItem("article"))
+                    postTodelete = JSON.parse(localStorage.getItem("skillsPage"))
                 }
             }
             postTodelete.splice(index, 1);
-            localStorage.setItem("article", JSON.stringify(postTodelete));
+            localStorage.setItem("skillsPage", JSON.stringify(postTodelete));
             tbody.textContent = "";
             displayPost();
             location.reload();
             alert("deleted successfull")
         }
-        // editarticles
+        // editskillsPages
         function editPost(event) {
             const formContainer = document.getElementById('myform');
             const publish = document.getElementById("publish");
        console.log(event.target.parentElement.parentElement.parentElement.firstChild.textContent)
 
-            let retrieved=JSON.parse(localStorage.getItem('article'));
-            authorName.value = retrieved[index].authorName;
-            articleName.value = retrieved[index].articleName;
-            message.value = retrieved[index].message;
-
-
-                    
+            let retrieved=JSON.parse(localStorage.getItem('skillsPage'));
+            hoverText.value = retrieved[index].hoverText;
+         
+  
             publish.addEventListener('click',(e)=>{
                 e.preventDefault();
                 console.log(e.target.textContent)
-                retrieved[index].authorName=authorName.value;
-                retrieved[index].articleName = articleName.value;
-                retrieved[index].message = message.value;
+                retrieved[index].hoverText=hoverText.value;
                               
-                localStorage.setItem('article',JSON.stringify(retrieved));
+                localStorage.setItem('skillsPage',JSON.stringify(retrieved));
             
                 setTimeout(() => {
                 formContainer.classList.toggle('open-modal');

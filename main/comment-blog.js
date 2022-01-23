@@ -1,69 +1,61 @@
+const urlParams = new URLSearchParams(location.search);
+var id = urlParams.get("id");
+
+const Blog =  document.querySelector('.flex-container')
 const submit = document.querySelector('.comment-submit');
 const commentList = document.querySelector('.comments');
 const commentInput = document.querySelector('.comment-input');
 
-// Display date function
 
-function formatAMPM() {
-var date = new Date();
-var n = date.toDateString();
-var time = date.toLocaleTimeString();
+const getblog = JSON.parse(localStorage.getItem("article")).sort().reverse();
 
-    return n + ' ' +  time;
-}
-var today = formatAMPM();
+let check = localStorage.getItem("article");
+var Readmessage = getblog[id];
 
-// likes 
-let likebtn = document.querySelector("#likebtn");
-let dislikebtn = document.querySelector("#displikebtn");
-
-let input1 = document.querySelector("#input1");
-let input2 = document.querySelector("#input2");
-
-likebtn.addEventListener("click", () => {
-  input1.value = parseInt(input1.value) + 1;
-  input1.style.color = "green";
-});
-
-  dislikebtn.addEventListener("click", () => {
-  input2.value = parseInt(input2.value) + 1;
-  input2.style.color = "red";
-});
-
-// 
+// store comment into local storage
 
 
-function template(data) {
-  commentList.insertAdjacentHTML("beforeend", `
-  <div class="comment flex items-start justify-start">
-      <img class="comment-avatar" src="${data.avatar}" />
-      <div class="flex-1">
-        <h3 class="comment-author">${data.author}</h3>
-        <p class="comment-body">${data.comment}</p>
-      </div>
-    </div>
-  </div>`);
-}
+Blog.innerHTML = `
+                <div class="flex-container">
+                <div class="para">
+                    <h2><span>${Readmessage.date}</span> <br>Author :  ${Readmessage.authorName}</h2>
+                    <div class="image"> <img src="${Readmessage.image}" />
+                    </div>  
+                          <h3>Article Title : ${Readmessage.articleName}</h3> <br> <br>
+                      
+                    <p>
+                      ${Readmessage.message}
+                    </p> <br><br> 
+                        <a href="/pages/blogs.html"><span class="back">back</span></a> 
+                </div>
+                </div>
 
-function appendComment (event) {
-  const data = {
-    avatar: "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light",
-    comment: commentInput.value,
-    author: "User Comment" + " " + today
-  };
 
-  event.preventDefault();
-  if (commentInput.value.length < 1) return;
-  template(data);
+                <div class="container">
+                <h2>Leave us a comment</h2>
+                <form action="" >
+                  <input type="text" name="name" id="name" placeholder="Your Name" >
+                  <br> <br> <br>
+                  
+                    <textarea placeholder="Add your comment" class="comment-input"></textarea>
+                   <div class="btn">
+                    <input type="submit" value="Post Comment" class="comment-submit">
+                    <button type="reset" class="comment-cancel">Cancel</button>
+                   </div>
+                </form>
+        </div>
 
-  commentInput.value = "";
 
-    localStorage.setItem('commentListing', commentList.innerHTML);
+                <div class="read-comment">
+                    <h2><span class="title">Read Comments</span></h2>
+                    <p><span  class="date">29/12/2021 6:41 09 at 6:41 09 pm</span> </p>
 
-}
-submit.addEventListener('click', appendComment, false)
-const saved = localStorage.getItem('commentListing');
-if (saved) {
-  commentList.innerHTML = saved;
-}
+                  <!--   <p id="likebtn">likes <span id="displikebtn">Displike</span></p> -->
+
+                </div>
+                </div>
+        `;
+        
+let BlogComment = document.querySelector(".article-comments");
+let div = document.createElement('div');
 

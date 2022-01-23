@@ -26,7 +26,9 @@ function Contact(event) {
         message.style.border = "solid 1px red";
         fname_invalid.style.display = "block";
         Message_invalid.style.display = "block";
+
     } else if (!check_email(email.value)) {
+        
         email.style.border = "solid 1px red";
         email_invalid.style.display = "block";
     }
@@ -38,12 +40,12 @@ function Contact(event) {
             Lname: lname.value,
             Email: email.value,
             Tel: tel.value,
+            location: userLocation,
             Message: message.value,
-
-            
+       
         }
         let queries = localStorage.getItem("queries");
-        console.log(fname.value)
+        // console.log(fname.value)
         if (queries) {
 
             var convert = JSON.parse(queries);
@@ -69,4 +71,56 @@ function Contact(event) {
         return true;
     }
 }
+
+// geolocation Detatection
+
+function successCallback (){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(onSuccess, errorCallback);
+    }else{
+        userLocation = "Your browser not support";
+    }
+}
+function onSuccess(position){
+    let {latitude, longitude} = position.coords;
+
+    
+    fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=01c88ee1253b428b97ff365cad50a597`)
+        .then(response => response.json()).then(response => {
+        
+        let infoLocationDetails = response.results[0].components;
+        console.table(infoLocationDetails);
+        let {county, postcode, country} = infoLocationDetails;
+            userLocation = `${county} , ${country}`;
+            
+        }).catch(() => {
+        
+        userLocation = "Something went wrong";
+    });
+}
+function errorCallback (error){
+    if(error.code == 1){
+        userLocation = "You denied location request";
+
+    }else if(error.code == 2){
+        userLocation = "Location not unavailable";
+
+    }else{
+        userLocation = "Location not detected";
+    }
+
+    button.setAttribute("disabled", "true");
+}
+successCallback();
+
+
+
+
+
+
+
+
+
+
+
 
