@@ -158,33 +158,33 @@ button:active {
   border: 2px solid #333;
   padding: 15px 10px;
 }
-.read-comment {
+#list-comment {
   display: flex;
-  background-color: #a7adbd;
+  background-color: #f1f1f1;
   flex-direction: column;
   margin-top: 15px;
-  width: 550px;
+  width: 900px;
   padding: 15px 10px;
   gap: 15px;
 }
-.read-comment .title {
+#list-comment .title {
   font-size: 20px;
   margin-bottom: 15px;
 }
-.read-comment .title:hover {
+#list-comment .title:hover {
   color: red;
 }
-.read-comment p {
+#list-comment p {
   gap: 12px;
 }
-.read-comment .date {
+#list-comment .date {
   color: red;
   font-size: 12px;
 }
 
-.container h2 {
+#list-comment h2 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .container textarea {
   height: 20px;
@@ -197,7 +197,7 @@ button:active {
   outline: none;
   transition: 0.5s;
 }
-#name{
+#name-input{
   height: 20px;
   width: 50%;
   border: none;
@@ -446,7 +446,7 @@ input[type="checkbox"] {
     margin-top: 45px;
   }
   /* comments */
-  .flex-container .read-comment {
+  .flex-container #list-comment {
     width: 90%;
   }
   .flex-container .container {

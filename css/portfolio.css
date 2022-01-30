@@ -93,7 +93,7 @@ h1 {
 }
 .card-image {
   grid-area: image;
-  background: url(/img/img-blog/java-proje.png);
+  background: url(../img/img-blog/java-proje.png);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;

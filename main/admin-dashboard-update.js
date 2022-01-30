@@ -8,10 +8,17 @@ document.querySelector("#image").addEventListener("change", function () {
 });
 
 
-let datePost = new Date().toDateString();
-
-
-
+var datePost = new Date().toLocaleString('en-GB', {
+    year: "numeric",
+    month: 'long',
+    day: '2-digit',
+    weekday: "long",
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  })
+  
+  ;
 function ceatBlog(event) {
     event.preventDefault();
 
@@ -45,6 +52,7 @@ function ceatBlog(event) {
             message: message.value,
             date: datePost,
             image: url,
+            comment:[],
         
         }
         let bloges = localStorage.getItem("article");
@@ -169,5 +177,4 @@ function displayPost(index) {
 
     }
 
-// editPost();
 displayPost();

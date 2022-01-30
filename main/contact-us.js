@@ -10,7 +10,19 @@
    var lname_invalid = document.getElementById("lname_invalid");
    var email_invalid = document.getElementById("email_invalid");
    var tel_invalid = document.getElementById("tel_invalid");
-   var Message_invalid = document.getElementById("message");
+var Message_invalid = document.getElementById("message");
+   
+// date function 
+var time = new Date().toLocaleString('en-GB', {
+    year: "numeric",
+    month: 'long',
+    day: '2-digit',
+    weekday: "long",
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  })
+  
   
 
 function Contact(event) {
@@ -42,6 +54,7 @@ function Contact(event) {
             Tel: tel.value,
             location: userLocation,
             Message: message.value,
+            Time: time
        
         }
         let queries = localStorage.getItem("queries");

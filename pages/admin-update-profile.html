@@ -32,9 +32,7 @@
 
           <li><a href="../pages/admin-update-profile.html">Update Profile</a></li>
 
-          <li><a href="../pages/admin-login.html" style="color: red;" id="logout">Logout</a></li>
-
-         
+          <li><a href="../pages/admin-login.html" style="color: red;" id="logout">Logout</a></li>       
           
         </div>
       </div>
@@ -45,35 +43,35 @@
     
 <div class="container">
   <div class="title">
-    Update and Upload articles
+    Update Profiles Informations
   </div>
   <div class="card-body">
     <form class="form"  id='myform' onsubmit="ceatBlog(event)">
 
       <div class="inputfield">
-         <label>Name of the Publisher</label>
+         <label>Names</label>
          <input type="text" class="input" id="authorName" >
       </div> 
       
       <div class="inputfield">
-       <label>Article Title</label>
+       <label>Greeting Message</label>
        <input type="text" class="input" id="articleName">
     </div> 
  
        <div class="inputfield">
-         <label>Upload Image</label>
+         <label>Image Profile</label>
          <input type="file" id="image"  >
       </div> 
      
      <div class="inputfield">
-         <label>Article Edit Form</label>
+         <label>About Me</label>
          <textarea class="textarea" id="message"></textarea>
       </div> 
      
     
      <div class="inputfield">
-       <input type="submit" value="Publish Article" class="btn" id="publish" ><br>
-      
+       <input type="submit" value="Update Profiles" class="btn" id="publish" ><br>
+       
      </div>
     </form>
   </div>
@@ -81,14 +79,14 @@
 </div>
 
     <div class="table-container">
-        <h1 class="heading">Articles' Dashboard </h1>
+        <h1 class="heading">Profile Information</h1>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Article Number</th>
-                    <th>Publisher</th>
-                    <th>Article Title</th>
-                    <th>Published Date</th>
+                    <th>Number</th>
+                    <th>Names</th>
+                    <th>Greeting</th>
+                    <th>Updated Date</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -111,7 +109,7 @@
   </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
     <script src="../main/protect-page.js"></script>
-    <script src="../main/admin-dashboard-update.js"></script>
+    <script src="../main/admin-update-profile.js"></script>
     <script src="../main/admin-logout.js"></script>
 
 </html>
