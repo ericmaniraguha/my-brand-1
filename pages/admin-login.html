@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="UTF-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="../css/admin-login.css" />
-   <title>admin login page</title>
- </head>
- <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/admin-login.css" />
+    <link rel="stylesheet" href="../css/admin-login-left-side.css">
+    <title>Admin Login Page</title>
+  </head>
 
-   <nav class="navbar">
-     <!-- Logo -->
-     <div class="logo">{E}</div>
-     <!-- navigations -->
-     <ul class="nav-links">
-       <!-- check toggle -->
-       <input type="checkbox" id="checkbox_toggle" />
-       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-       <!-- navigation menu -->
-       <div class="menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../pages/admin-articles-dashboard.html" style="color: red;">Logout</a></li>
-   
+  <body>
+    <nav class="navbar">
+      <!-- logo -->
+      <div class="logo">{E}</div>
+      <!-- navigation  -->
+      <ul class="nav-links">
+        <!-- checkbox toggle -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <!-- navigation menu -->
+        <div class="menu">
+          <li><a href="/index.html">Home</a></li>
+        </div>
+      </ul>
+    </nav>
+    
+    <section class="login-page">
+      <h1>Admin Login Page</h1>
+      <img src="../img/profile.PNG" alt="profile" id="profile" />
+      <div class="login-container">
+        <form class="login-form loader-container" onsubmit="Adminlogin(event)">
+          <div >
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="form-box">
+            <input class="form-input" type="text" placeholder="Email" id="email" name="email"/>
+            <span class="text-invalid" id="email_invalid"> Email must be valid and not empty</span>
+          </div>
+          <div class="form-box">
+            <input class="form-input" type="password" id="password" placeholder="Password" name="password"/>
+            <span class="text-invalid" id="password_invalid">Password must not be empty</span
+            >
+          </div>
+          <span class="text-invalid" id="invalid"
+            >Sorry, Your password and email are incrorrect!</span
+          >
+          <div class="form-box">
+            <button type="submit" class="btn btn-primary " id="login_btn" > Login </button>
+          </div>
+
+          <div class="not-registered">
+
+          </div>
+        </form>
       </div>
-     </ul>
-   </nav>
-
-   <!-- body part login form code -->
-       
-  <section>
-    <!-- <h3>Admin Page</h3> -->
-    <div class="profile-box">
-         <img src="../img/profile.PNG" alt="profile">
-    </div>
-
-    <div class="content-box">
-         <div class="form-box">
-              <h2>Admin Login Form </h2>
-              <form>
-
-                 <div class="input-box">
-                      <span>Security Message: </span><input type="text" name="name">
-                 </div>
-
-                 <div class="input-box"><span>Password:</span>
-                      <input type="password" name="password">
-                 </div>
-
-                
-                <div class="input-box">
-                    <a href="../pages/admin-articles-dashboard.html" > <input type="submit" value="Login " name="" ></a><br> <br> 
-               </div>
-                
-              </form>
-         </div>
-    </div>
-
-</section>
-  
- </body>
+    </section>
+    <script src="../main/admin-login.js"></script>
+  </body>
 </html>

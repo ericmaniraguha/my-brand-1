@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/css/admin-articles-dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/admin-articles-dashboard.css"> -->
+    <link rel="stylesheet" href="../css/admin-update-form.css">
     <title>Admin Dashboard - Articles</title>
 </head>
 <body>
@@ -15,20 +16,66 @@
         <!-- logo -->
         <div class="logo">{E}</div>
         <!-- navigation  -->
-        <ul class="nav-links">
+        <div class="nav-links"> 
           <!-- checkbox toggle -->
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <!-- navigation menu -->
         <div class="menu">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/pages/admin-update-form.html" style="color: red;">Logout</a></li>
-       
-          
+           
+          <a href="../pages/read-queries.html">
+            <button class="btn-logout"  style="padding: 10px 5px;">Read Queries</button>
+          </a>
+
+            <a href="../pages/admin-articles-dashboard.html">
+              <button class="btn-logout"  style="padding: 10px 5px;">Create Blog</button>
+            </a>
+         
+              <button class="btn-logout"  id="logout" style="color: red;padding: 10px 5px;" >Logout</button>  
+            
         </div>
-      </ul>
+      </div>
     </nav>
 
+
+    
+    
+<div class="container">
+  <div class="title">
+    Update and Upload articles
+  </div>
+  <div class="card-body">
+    <form class="form"  id='myform' onsubmit="ceatBlog(event)">
+
+      <div class="inputfield">
+         <label>Name of the Publisher</label>
+         <input type="text" class="input" id="authorName" >
+      </div> 
+      
+      <div class="inputfield">
+       <label>Article Title</label>
+       <input type="text" class="input" id="articleName">
+    </div> 
+ 
+       <div class="inputfield">
+         <label>Upload Image</label>
+         <input type="file" id="image"  >
+      </div> 
+     
+     <div class="inputfield">
+         <label>Article Edit Form</label>
+         <textarea class="textarea" id="message"></textarea>
+      </div> 
+     
+    
+     <div class="inputfield">
+       <input type="submit" value="Publish" class="btn" ><br>
+       <a href="" style="color:brown;">Back</a>
+     </div>
+    </form>
+  </div>
+ 
+</div>
 
     <div class="table-container">
         <h1 class="heading">Articles' Dashboard </h1>
@@ -36,15 +83,15 @@
             <thead>
                 <tr>
                     <th>Article Number</th>
+                    <th>Publisher</th>
                     <th>Article Title</th>
                     <th>Published Date</th>
-                    <th>Likes</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody >
+               <!-- <tr>
                 <td data-label="number">1.</td>
                 <td data-label="title">Key of JavaScript </td>
                 <td data-label="date">1 Jan 2021</td>
@@ -52,36 +99,15 @@
                 <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
                 <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
               </tr>
-              <tr>
-                <td data-label="number">2.</td>
-                <td data-label="title">Key of JavaScript </td>
-                <td data-label="date">1 Jan 2021</td>
-                <td data-label="likes">+152</td>
-                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
-                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
-              </tr>
-              <tr>
-                <td data-label="number">3.</td>
-                <td data-label="title">Key of JavaScript </td>
-                <td data-label="date">1 Jan 2021</td>
-                <td data-label="likes">+152</td>
-                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
-                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
-              </tr>
-              <tr>
-                <td data-label="number">4.</td>
-                <td data-label="title">Key of JavaScript </td>
-                <td data-label="date">1 Jan 2021</td>
-                <td data-label="likes">+152</td>
-                <td data-label="Edit"><a href="/pages/admin-update-form.html" class="btn">Edit<i class="material-icons">edit</i></a></td>
-                <td data-label="Delete"><a href="#" class="btn">Delete<i class="material-icons" >delete</i></a></td>
-              </tr>
-             
+        
+              -->
             </tbody>
     
         </table>
-       <br> <a href="/pages/admin-update-form.html"><button class="add-btn">Publish Article</button></a>
     </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="../main/protect-page.js"></script>
+    <script src="../main/admin-dashboard-update.js"></script>
+    <script src="../main/admin-logout.js"></script>
 </body>
 </html>
