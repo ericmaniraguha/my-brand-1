@@ -96,12 +96,41 @@ li {
   margin-left: 523px;
 }
 .para .back {
-  color: rgb(104, 97, 97);
+  color: rgb(218, 36, 36);
   margin-left: 640px;
 }
 .para .back:hover {
-  color: red;
+  color: rgb(5, 209, 216);
   cursor: pointer;
+}
+.comment-avatar {
+  border-radius: 50%;
+  height: 48px;
+  margin-right: 1rem;
+  width: 48px;
+}
+
+#input2, #input1 {
+  width: 50px;
+  border: none;
+  color: rgb(3, 49, 47);
+  font-size: 15px;
+  margin: 0 10px;
+  background-color: #f1f1f1;
+  pointer-events: none;
+}
+button {
+  color: rgb(48, 45, 44);
+  background-color: none;
+  border: none;
+  font-size: 20px;
+  padding: 0 15;
+  margin: 10px 0;
+  cursor: pointer;
+}
+button:active {
+  color: rgb(18, 175, 136);
+  transform: scale(1.2);
 }
 
 .para h2 span {
@@ -249,11 +278,12 @@ input[type="checkbox"] {
   .hamburger {
     position: absolute;
     display: block;
-    margin-left: -350px;
+    margin-left: -20px;
     font-size: 25px;
 
     z-index: 10;
      }
+     
 
   .logo {
     font-size: 35px;
@@ -288,8 +318,10 @@ input[type="checkbox"] {
     font-size: 15px;
   }
   .para .back {
-    margin-left: 640px;
+    color: rgb(218, 36, 36);
+    margin-left: 240px;
   }
+  
   .para p {
     margin-top: 45px;
   }
@@ -367,7 +399,6 @@ input[type="checkbox"] {
     padding-left: 20px;
     padding-top: 10px;
   }
-
   .flex-container {
     margin-top: 180px;
     display: flex;
